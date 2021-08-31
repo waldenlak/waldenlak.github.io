@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;700;900&display=swap');
+@import url('http://cdn.repository.webfont.com/webfonts/nomal/146144/48128/611e388df629d88c90c3df40.css');
+h1#site-title {
+    font-family: 'Muyao-Softbrush2a03362ef623ae0', 'Noto Serif SC', serif;
+    }
+a#site-name {
+    font-family: 'Muyao-Softbrush2a03362ef623ae0', 'Noto Serif SC', serif;
+    font-size: 1.6em;
+  }
+#web_bg{
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+}
+/* 顶部导航栏标题、图标的字体、颜色、大小 */
+#nav a {
+  color: rgba(255, 250, 205, 0.8);
+  }
+#nav {
+font-size: 1.3em;
+  }
+#site_social_icons .social-icon {
+font-size: 2.2em;
+}
+#page-header.nav-fixed #nav{
+  top: -80px;
+}
+/*首页中间标题、副标题、正片叠底遮罩*/
+#page-header #site-title {
+  color: #FBCD5F;
+  font-size: 400%;
+}
+#page-header #site-subtitle {
+  color: rgba(254, 255, 239, 0.8);
+  font-size: 100%;
+}
+header#page-header{
+  position: relative;
+  background: rgba(0,0,0,.35) no-repeat center center;
+  background-blend-mode: multiply;
+}
+/*夜间模式配色、伪类遮罩层透明*/
+[data-theme="dark"] #aside-content .card-widget,[data-theme="dark"] div#post{
+      background: rgba(65, 68, 65, 0.88);
+      color: #e2dfdf;
+    }
+[data-theme='dark']
+  blockquote{
+    background: rgba(44, 44, 44, 0.17);
+    border-left: 0.2rem solid rgba(219,219,219,0.1);
+    }
+[data-theme='dark']
+    hr{
+      border: 1.5px dashed rgba(255,255,255,0.2);
+    }
+[data-theme="dark"]
+  #footer::before{
+      background: transparent!important;
+    }
+[data-theme="dark"]
+  #page-header::before{
+    background: transparent!important;
+    }
+/*夜间模式下的阅读模式背景，文章页底色，字体颜色，引用块颜色，返回按钮颜色*/
+[data-theme="dark"] body.read-mode{
+    background: #081010de;
+}
+[data-theme="dark"] .read-mode #aside-content .card-widget,[data-theme="dark"] .read-mode div#post{
+      background: #08101000;
+      color: rgba(255, 246, 230, 0.81);
+    }
+[data-theme="dark"] div#post {
+    background: rgba(65, 68, 65, 0.88);
+    color: #e2dfdf;
+}
+[data-theme='dark'] .read-mode
+  hr{
+    border: 1.5px dashed rgba(255, 255, 255, 0.08);
+  }
+[data-theme="dark"]
+  button.fas.fa-sign-out-alt.exit-readmode{
+    background: rgba(17, 17, 17, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    }
+[data-theme="dark"]
+  button.fas.fa-sign-out-alt.exit-readmode:hover{
+    color:rgba(17, 17, 17, 0.6);
+  }
+/*阅读模式正文字体，引用配色，删去文章相关信息、退出按钮，配色*/
+.read-mode{
+    font-size:17px;
+    /* 可在此处引入自定义字体，具体方法搜css引入字体 */
+}
+.read-mode #article-container blockquote{
+    background:rgba(221, 221, 221, 0.05);
+    border-left: 0.2rem rgba(190, 190, 190, 0.3)
+    }
+.read-mode div#post-info #post-meta{
+  display: none!important;
+}
+body.read-mode{
+  background: #E1E0C75c;
+}
+.read-mode #aside-content .card-widget{
+    background: rgba(199, 237, 204, 0.36)/*!important/*绿豆沙*/;
+  }
+.read-mode div#post{
+  background: rgba(199, 237, 204, 0)/*!important/*绿豆沙*/;
+  }
+button.fas.fa-sign-out-alt.exit-readmode{
+  background: rgba(204, 204, 204, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  }
+button.fas.fa-sign-out-alt.exit-readmode:hover{
+  color:rgba(172, 172, 172, 0.6);
+}
+/*删去侧边栏作者头像、文章页作者栏、公告栏*/
+.avatar-img {
+  display: none!important;
+}
+main#content-inner .card-widget.card-announcement,main#content-inner .card-widget.card-info{
+  display: none!important;
+}
+/*公告栏、分类、归档、页码、右侧按钮*/
+.card-announcement-animation {
+  color: rgba(65, 68, 65, 0.5);
+  animation: announ_animation 0.8s linear infinite;
+}
+i.fas.fa-folder-open,i.fas.fa-archive {
+  color: #667eeab3;
+}
+#pagination .page-number.current {
+  background-color: #667eea80;
+}
+div#rightside button {
+  background-color: #667eea6e;
+}
+a#to_comment{
+  background-color: #667eea6e;
+}
+/*页脚自定义字段字体颜色*/
+.footer_custom_text {
+    color: #F4BB84;
+}
+#post-info #post-meta{
+  font-size: 60%;
+}
+/* 正文、目录、作者栏去阴影，正文背景色，版权链接去掉下划线、阴影，评论版本位置、颜色 */
+div#post,.sticky_layout,.card-widget.card-info{
+  box-shadow: none;
+}
+div#post card{
+  background-color: rgba(255, 255, 255, 0.5)
+}
+#aside-content #card-toc .toc-content .toc-link.active{
+  border-left-color: #667eea80;
+  background: #667eea80;
+}
+#article-container .highlight-tools .expand + .code-lang{
+  left: 3rem;
+  font-weight: lighter;
+  font-size: 1em;
+}
+#article-container .highlight-tools{
+  color: #cad5ffeb;
+}
+.post-copyright{
+  text-decoration: none;
+  border: 0px solid var(--light-grey);
+}
+.vpower.txt-right{
+  color: rgba(167, 167, 167, 0.6);
+  text-align: left;
+}
+/*首页文章栏尺寸、标题*/
+#recent-posts>.post-card-large {
+  height: 20em!important;
+}
+#recent-posts > .post-card-large >.recent-post-info > .content{
+  -webkit-line-clamp: 5!important;
+}
+a.article-title {
+  margin-bottom: 0.4rem;/*段后间距*/
+  font-size: 2em;
+}
+/*标题字体、全局字体加载配置
+.entry-title {
+    font-family: 'HanWangKaiMediu2a0328ec0123ae0', 'Noto Serif SC', serif;  
+    font-weight: 900;
+}
+body {
+    font-family: -apple-system, 'Noto Serif SC', "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+/* 全局默认光标*/
+body,
+html{
+  cursor: url('../imgs/BibataModBlue/Arrow.cur'),auto !important;
+}
+/* 悬停图片时的光标*/
+img{
+  cursor: url('../imgs/BibataModBlue/Cross.cur'),auto !important;
+}
+/* 选择链接标签时的光标 */
+a:hover{
+    cursor: url('../imgs/BibataModBlue/Hand2.cur'),auto;
+}
+/* 选中输入框时的光标 */
+input:hover{
+    cursor: url('../imgs/BibataModBlue/Handwriting.cur'),auto;
+}
+/* 悬停按钮时的光标 */
+button:hover{
+    cursor: url('../imgs/BibataModBlue/Hand.cur'),auto;
+}
+#rightside>div>button,
+#rightside>div>a {
+    display: block;
+    margin-bottom: 2px;
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+    text-align: center;
+    font-size: 16px;
+    cursor: url(‘../imgs/BibataModBlue/Hand.cur’),auto;
+}
+/* 悬停导航、菜单、列表的图标标签时的光标 */
+i:hover{
+    cursor: url('../imgs/BibataModBlue/Copy.cur'),auto;
+}
+/* 悬停页脚链接标签（例如页脚徽标）时的光标 */
+#footer-wrap a:hover{
+      cursor: url('../imgs/BibataModBlue/UpArrow2'),auto;
+}
+/* 悬停页码时的光标 */
+#pagination .page-number:hover{
+      cursor: url('../imgs/BibataModBlue/SizeWE.cur'),auto;
+}
+/* 悬停菜单栏时的光标 */
+#nav .site-page:hover{
+      cursor: url('../imgs/BibataModBlue/Copy.cur'),auto;
+}
+/* 打赏 */
+.post-reward .reward-button {
+  cursor: url('../imgs/BibataModBlue/Copy.cur'),auto;
+}
+/* 文章标签 */
+.layout_post .tag_share .post-meta__tags {
+  cursor: url('../imgs/BibataModBlue/UpArrow'),auto;
+}
