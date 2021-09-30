@@ -1,0 +1,789 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>建站01-基础理论理解与构建方式选择 | 浮光河</title><meta name="keywords" content="前端"><meta name="author" content="惊蛰 子诺,2952068332@qq.com"><meta name="copyright" content="惊蛰 子诺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文粗略整理了目前的几种建站方案以及网站搭建相关的概念，希望帮助小白在了解建站的基本情况后再选择是否建站，要采取哪种方式建站，从一开始就定好大框架。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建站01-基础理论理解与构建方式选择">
+<meta property="og:url" content="https://waldenlak.github.io/post/01know&choice/index.html">
+<meta property="og:site_name" content="浮光河">
+<meta property="og:description" content="本文粗略整理了目前的几种建站方案以及网站搭建相关的概念，希望帮助小白在了解建站的基本情况后再选择是否建站，要采取哪种方式建站，从一开始就定好大框架。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.wikihow.com/images/8/8e/Design-a-Logo-Step-15Bullet2.jpg">
+<meta property="article:published_time" content="2021-08-15T02:59:22.000Z">
+<meta property="article:modified_time" content="2021-09-30T11:08:20.445Z">
+<meta property="article:author" content="惊蛰 子诺">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wikihow.com/images/8/8e/Design-a-Logo-Step-15Bullet2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://waldenlak.github.io/post/01know&amp;choice/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到你查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为夜间模式","night_to_day":"你已切换为日间模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-right"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '建站01-基础理论理解与构建方式选择',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-09-30 19:08:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/design.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shujia1"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-yanchupiao"></i><span> 影剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浮光河</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shujia1"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yinle"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw iconfont icon-yanchupiao"></i><span> 影剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="post-page"><div id="post-info"><h1 class="post-title">建站01-基础理论理解与构建方式选择</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="iconfont icon-rili post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-15T02:59:22.000Z" title="发表于 2021-08-15 10:59:22">2021-08-15</time><span class="post-meta-separator"> </span><i class="iconfont icon-jianchagengxin post-meta-icon"></i><span class="post-meta-label">编辑于</span><time class="post-meta-date-updated" datetime="2021-09-30T11:08:20.445Z" title="编辑于 2021-09-30 19:08:20">2021-09-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator"> </span><span class="post-meta-wordcount"><i class="iconfont icon-icon-bijizishu post-meta-icon"></i><span class="post-meta-label">字数 </span><span class="word-count">8.9k</span><span class="post-meta-separator"> </span><i class="iconfont icon-shichang- post-meta-icon"></i><span class="post-meta-label">阅读时长 </span><span>27分钟</span></span><span class="post-meta-separator"> </span><span class="post-meta-pv-cv" id="" data-flag-title="建站01-基础理论理解与构建方式选择"><i class="iconfont icon-chakan post-meta-icon"></i><span class="post-meta-label">阅读 </span><span id="busuanzi_value_page_pv"></span><span class="post-meta-label">次</span></span></div></div></div><div class="paper"><article class="post-content" id="article-container"><meta name="referrer" content="no-referrer"/>
+<p>建站系列是一个建站路径的梳理整合。如有错误，欢迎指正。</p>
+<hr>
+<p>网上常见的建站教程，要么是零碎的细节，要么是直接的步骤，没有基础知识背书的外行小白在遇到问题时总会要碰更多弯路。本文从小白视角出发，粗略整理了目前建站的几种方案以及网站搭建相关的理论概念，希望帮助小白在大致了解网站理论与建站情况后再选择是否建站，要采取哪种方式建站，从一开始就选定好大框架。以下是本文讨论的内容。</p>
+<p><ul class="markdownIt-TOC">
+<li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">计算机网络相关概念</a></li>
+<li><a href="#%E4%B8%80%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">（一）网站相关概念</a></li>
+<li><a href="#%E4%BA%8C%E7%BD%91%E7%AB%99%E6%A1%86%E6%9E%B6%E7%9A%84%E9%80%89%E6%8B%A9">（二）网站框架的选择</a>
+<ul>
+<li><a href="#a-%E4%BD%BF%E7%94%A8%E7%8E%B0%E6%88%90%E6%A1%86%E6%9E%B6%E6%9C%80%E7%9C%81%E5%BF%83">A 使用现成框架（最省心）</a></li>
+<li><a href="#b-%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%80%E8%87%AA%E7%94%B1">B 自己开发框架（最自由）</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%80%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5">（一）域名服务相关概念</a></li>
+<li><a href="#%E4%BA%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B">（二）域名解析过程</a>
+<ul>
+<li><a href="#1-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9">1. 域名解析服务器的选择</a></li>
+<li><a href="#2-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%AE%B0%E5%BD%95">2. 域名解析记录</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%80%E5%9B%BE%E5%BA%8A">（一）图床</a></li>
+<li><a href="#%E4%BA%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%A9%BA%E9%97%B4">（二）云服务器 // 虚拟主机空间</a></li>
+<li><a href="#%E4%B8%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9Fvcs">（一）服务器软件、版本控制系统（VCS）</a></li>
+<li><a href="#%E4%BA%8C%E5%89%8D%E7%AB%AF%E8%AF%AD%E8%A8%80">（二）前端语言</a></li>
+<li><a href="#%E4%B8%89%E5%89%8D%E7%AB%AF%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83">（三）前端语言运行环境</a></li>
+<li><a href="#%E5%9B%9B%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">（四）包管理工具</a></li>
+<li><a href="#%E4%BA%94%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8">（五）代码编辑器</a></li>
+<li><a href="#%E5%85%AD%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0">（六）代码托管平台</a></li>
+<li><a href="#%E4%B8%80markdown%E6%A0%87%E7%AD%BE%E8%AF%AD%E6%B3%95">（一）Markdown标签语法</a></li>
+<li><a href="#%E4%BA%8Chtml%E6%A0%87%E7%AD%BE%E8%AF%AD%E6%B3%95">（二）HTML标签语法</a></li>
+<li><a href="#%E4%B8%89%E6%92%B0%E5%86%99%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B">（三）撰写发布文章流程</a></li>
+</ul>
+</p>
+<p>可以大致看到，建站主要涉及网站框架、网站域名、网站资源存储、网站资源管理编辑、网站内容编辑等方面的考量，每个环节对小白来说都可能有技术上的吃力，或认知上的模糊，对自己的需求和网站相关工具与技术的不明晰都会导致时间（不知道代码什么意思、怎么写、在哪里写、缩进和符号格式对不对）和金钱（不知道要不要买这个产品、什么时候买、买哪种配置、怎么买有性价比）等沉没成本。因此，（除了对于资金充裕的每年三位数起的速成建站玩家来说，）建站不是轻易能着手并坚持的。</p>
+<hr>
+<h1 id="todo"><a class="markdownIt-Anchor" href="#todo"></a> TODO</h1>
+<p>⬜ 图床、云服务器、虚拟主机空间</p>
+<hr>
+<h1 id="a-话题前言"><a class="markdownIt-Anchor" href="#a-话题前言"></a> A 话题前言</h1>
+<details>
+<summary>为什么要建网站？</summary>
+<ol>
+<li>
+<p>个人独立拥有的域名、品牌、作品集，个性与才能展示、创作作品输出的方式之一<br>A. 自有购建域名/服务器——定制性、品牌价值<br>B. 第三方平台供给三级域名和数据库——被动性、操作简单</p>
+</li>
+<li>
+<p>流量变现渠道之一<br>网站联盟-针对客户群体投放广告/商家找来合作广告</p>
+</li>
+<li>
+<p>学习网页设计相关技术</p>
+</li>
+<li>
+<p>？</p>
+</details>
+</li>
+</ol>
+<details>
+<summary>自媒体时代的个人站长如何生存？</summary>
+<p><small>当下流量变现方式：</small></p>
+<ol>
+<li><strong>图文内容</strong></li>
+<li>短 段子 视频</li>
+</ol>
+<p><small>配置策略：</small><br>
+多平台全渠道投放（主营渠道+引流渠道）</p>
+<p><small>限制因素：</small></p>
+<ol>
+<li>
+<p>政策管控（跟着规范走）；</p>
+</li>
+<li>
+<p>龙头马太效应（社交平台：两微一抖）；</p>
+</li>
+<li>
+<p>自媒体分流（博客社区：知乎豆瓣简书语雀CSDN…）</p>
+</details>
+在一切起步之前，我们需要先对自己的出发动机和未来发展规划心中有数。搭建网站不难，在网上搜索教程就能选择一个跟着上手；甚至我们说做什么事情的起步都不难，难的是在这条路上一直走下去，能解决每一个bug、完善每一点细节，能坚持如一更新内容，能进步创新、做出名堂……对于网站以及任何形式的媒体来说，唯一的重点都是“内容”。好看的皮囊能吸引惊鸿一瞥，有趣的灵魂能聚汇长久的引力。
+</li>
+</ol>
+<hr>
+<h1 id="b-名称概念与构建选择"><a class="markdownIt-Anchor" href="#b-名称概念与构建选择"></a> B 名称概念与构建选择</h1>
+<p>下面会整理一些相关理论知识，是名词的定义理解，用语比较书面化，熟悉计算机理论和相关名词者可以跳过，想快速抓重点的直接忽略相关概念里标序号的内容。<br>
+在配置过程中遇到的不理解的具体名词可以自行搜索，再套入理论框架中进行宏观理解。</p>
+<h2 id="计算机网络相关概念"><a class="markdownIt-Anchor" href="#计算机网络相关概念"></a> 计算机网络相关概念</h2>
+<div class="tabs" id="1"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#1-1">0-参考资料</button></li><li class="tab"><button type="button" data-href="#1-2">1-计算机网络体系结构</button></li><li class="tab"><button type="button" data-href="#1-3">2-计算机网络互联结构与IP</button></li><li class="tab"><button type="button" data-href="#1-4">3-网络</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="1-1"><p>搜索引擎是个帮助快速理解与解决问题的好工具；理论概念的参考资料选择出版物更严谨准确。</p>
+<div class="tag link"><a class="link-card" title="《计算机网络（第7版）》谢希仁" target="_blank" rel="noopener" href="https://blog.csdn.net/jayjaydream/article/details/88610348"><div class="left"><img src="https://ebookg.com/storage/upload/files/000/25/78/45_cover_m.jpg"/></div><div class="right"><p class="text">《计算机网络（第7版）》谢希仁</p><p class="url">https://blog.csdn.net/jayjaydream/article/details/88610348</p></div></a></div>
+<p><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://blog.csdn.net/yonghu14587007/article/details/105114445" 
+  title="重点整理"><span>重点整理</span></a></p>
+<div class="tag link"><a class="link-card" title="《大学计算机信息技术》上海交通大学出版社2017年7月" target="_blank" rel="noopener" href="https://www.icourse163.org/course/detail.htm?cid=1452527180"><div class="left"><img src="https://uimgproxy.suning.cn/uimg1/sop/commodity/gvzpZW6okqOqYl6wvQMBxg.png"/></div><div class="right"><p class="text">《大学计算机信息技术》上海交通大学出版社2017年7月</p><p class="url">https://www.icourse163.org/course/detail.htm?cid=1452527180</p></div></a></div>
+<p>⭐纯小白的基础课</p>
+<div class="tag link"><a class="link-card" title="大学计算机基础-国防科技大学" target="_blank" rel="noopener" href="https://www.icourse163.org/course/NUDT-17003?from=searchPage"><div class="left"><img src="https://img2.doubanio.com/lpic/s28468893.jpg"/></div><div class="right"><p class="text">大学计算机基础-国防科技大学</p><p class="url">https://www.icourse163.org/course/NUDT-17003?from=searchPage</p></div></a></div>
+<div class="tag link"><a class="link-card" title="大学计算机-北京理工大学" target="_blank" rel="noopener" href="https://www.icourse163.org/course/BIT-47004?from=searchPage"><div class="left"><img src="https://img2.doubanio.com/lpic/s28468893.jpg"/></div><div class="right"><p class="text">大学计算机-北京理工大学</p><p class="url">https://www.icourse163.org/course/BIT-47004?from=searchPage</p></div></a></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="1-2"><p>所有在计算机上的联网操作都在这个宏观结构内。</p>
+<p><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://blog.csdn.net/justloveyou_/article/details/69611328" 
+  title="计算机网络体系结构综述（上）-书呆子Rico"><span>计算机网络体系结构综述（上）-书呆子Rico</span></a></p>
+<p><strong>计算机网络体系结构</strong>：计算机网络各层<sub>（结构）</sub>及其协议<sub>（规则）</sub>的集合。<small><br>采用分层将一个复杂系统分解为若干子系统。</small></p>
+  <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>OSI/RM体系与TCP/IP体系</span></div>
+    <div class="hide-content"><p><strong>OSI/RM体系结构</strong>：开放系统互连基本参考模型<sub>(理论国际标准)</sub>。<br><small>Open System Interconnection Reference Model</small><br><strong>⭐<a target="_blank" rel="noopener" href="https://developer.51cto.com/art/201906/597961.htm">TCP/IP体系</a>结构</strong>：能够在多个不同网络间实现信息传输的协议簇<sub>(事实国际标准)</sub>。<br>垂直分层结构：物理层-数据链路层-网络层-传输层-应用层</p>
+<div class="justified-gallery"><img title="" src="https://images2015.cnblogs.com/blog/907596/201609/907596-20160926163530797-1486268033.png" width="70%" alt="各层功能、设备及协议">  <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fstatic.zybuluo.com%2Fa5635268%2Fzs2w2kfgqoxnc6ki56dy30fb%2Fimage002.gif" alt="OSI/RM参考模型">  <img src="https://img2018.cnblogs.com/blog/1458608/201809/1458608-20180924224248486-1340349434.png" width="70%" alt="TCP/IP协议栈">
+        </div></div></div>
+<ul>
+<li><strong>点到点</strong>：两主机之间的通信线路直连。<br><strong>端到端</strong>：两主机之间的通信经其他站点。</li>
+<li><strong>实体</strong>：任何可发送或接收信息的硬件或软件进程<br><strong>对等层</strong>：两个不同系统的同一层次<br><strong>对等实体</strong>：分别位于不同系统对等层的两个实体</li>
+<li><strong>协议(Protocol)</strong>：控制对等实体之间的通信规则。本层协议要使用且只能看见下层服务。</li>
+<li><strong>服务</strong>：在协议的控制下，下层向上层通过层间接口提供服务。</li>
+<li><strong>接口（服务访问点）</strong>：同一系统相邻两层的协议进行交互的地方。</li>
+<li><strong>路径</strong>：文档文件在主机中的位置。</li>
+</ul>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>通信协议（网络协议）</span></div>
+    <div class="hide-content"><p>两个计算机系统之间数据交换<sub>网络实体间收送报文的格式、顺序</sub>（网络通信）的规则。<br>三要素：</p>
+<ul>
+<li>语法(Syntax)<sub>(报文格式，数据与控制信息的结构或格式)</sub></li>
+<li>语义(Semantics)<sub>(控制信息、动作及响应的具体解释)</sub></li>
+<li>同步(Timing)<sub>(排序和速度匹配)</sub></li>
+</ul>
+</div></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>协议数据单元PDU</span></div>
+    <div class="hide-content"><p>(Protocol Data Unit,PDU)对等层之间交换的信息报文。</p>
+<ul>
+<li>
+<p><strong>包/数据包(Packet)</strong>：网络层-分组交换的数据传送形式。</p>
+</li>
+<li>
+<p><strong>帧(Frame)</strong>：数据链路层-传送数据的基本单元。</p>
+</li>
+<li>
+<p>比特(Bit)：物理层</p>
+</li>
+<li>
+<p>段(Segment)：传输层</p>
+</li>
+</ul>
+</div></div>
+<ul>
+<li>
+<p><strong><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E6%9C%8D%E5%8A%A1%E5%99%A8">服务器/伺服器(server)</a></strong>：一种管理资源并为用户提供服务的高性能计算机，根据服务器提供的服务类型不同，分为文件服务器（能使用户在其它计算机存取文件），数据库服务器，应用程序服务器，Web服务器等。通过<strong>网络</strong>给客户端用户使用。</p>
+</li>
+<li>
+<p><strong>主机(host)</strong>：在电脑网络领域中，服务器被称为主机（网络主机），其他接入的电脑为客户端。在电脑硬件领域中，机箱被称为主机(Mainframe)；电子游戏机中以读卡器、读碟机为主机，位于主机箱之外的通常称为外设（如显示器、键盘、鼠标、外接硬盘、外接光驱等）。</p>
+</li>
+<li>
+<p>Shell：命令解释程序，用户通过键盘输入指令，计算机接收到指令后，予以执行。如Linux下的<code>Bash</code>、<code>Zsh</code>，Windows下的<code>cmd</code>、<code>PowerShell</code>都是命令行终端工具。<small>参见<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/26860370">Windows 的 PowerShell 和 Linux 的 terminal 有啥区别？</a></small></p>
+</li>
+<li>
+<p><strong>客户机/终端/终端设备(Terminal)</strong>：人机交互设备（能输入输出指令的设备），如互联网终端设备、自助终端设备等；按所用操作系统，可分为Windows终端、Mac终端、Linux终端等。</p>
+</li>
+<li>
+<p><strong>终端用户/终端客户(end user)</strong>：产品的最终/直接使用(体验)者。</p>
+</li>
+<li>
+<p><strong>客户端/用户端(Client)</strong>：向服务端发送请求并获得相应服务的用户计算机。如网页浏览器(Browser)、移动客户端等。</p>
+</li>
+<li>
+<p><strong>服务端/伺服端/服务器端</strong>：提供服务的计算机。</p>
+</li>
+<li>
+<p><strong>云/云端</strong>：提供在线存取数据服务的程序，用户可在任一终端获得云服务。 如IaaS、PaaS、SaaS等。</p>
+<img src="https://pica.zhimg.com/v2-b6ab2fda8b806bde6e280cda46dac6fd_r.jpg?source=1940ef5c" alt="云-管/边缘-端的示意图" width="70%">
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="1-3"><p>网络层一般靠中间站点转发数据分组来实现端到端通信。</p>
+<p>计算机网络互联：由网络结点和通信链路组成的系统。<br>
+<img src="https://img2018.cnblogs.com/blog/1334023/201809/1334023-20180916095151068-1185030427.png" alt="网络连接结构" width="50%"><br>
+从逻辑上看，整个网络由资源子网和通信子网组成。</p>
+<ul>
+<li><strong>通信子网(网络层)</strong>：由通信设备、通信线路等组成的独立的数据通信系统。<small>主要实现点对点通信</small><br><strong>网络通信设备</strong>：网卡、网线、集线器(HUB)、交换机、路由器等网络交换、互连、传输设备。</li>
+<li><strong>资源子网</strong>：各种网络资源<sub>(硬件、软件、数据信息)</sub>的集合。
+<ul>
+<li><strong>计算机系统/网络工作站(Workstation)</strong>：连入网络的计算机，终端设备/客户端，有PC机、智能手机、平板电脑等。</li>
+<li>网络软件资源与数据资源<br><strong>网络操作系统</strong>：Unix、Windows、Linux、NetWare等种类。</li>
+<li>通信子网接口设备</li>
+</ul>
+</li>
+<li><strong>路由器(router)</strong>： 网络层使用的中间设备。网络<sub>(局域网、广域网)</sub>互连；数据处理；网络管理等作用。<br><strong>网关设备(gateway)</strong>：网络层以上使用的中间设备。较复杂，使用少。有时把路由器也称为网关。<br><strong>网桥</strong>：数据链路层<br><strong>转发器</strong>：物理层</li>
+<li><strong>IP协议</strong>（网络通信协议<small>Internet Protocol</small>）：运行于网络层，计算机在因特网上互联的数据包协议。</li>
+</ul>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>IP（IP地址）</span></div>
+    <div class="hide-content"><p>IP协议提供的统一地址格式，用来识别TCP/IP网络中互连的主机和路由器。 现今IP地址由于数量限制，会存在很多电脑设备共用一个IP地址的情况。<br><strong>组成：</strong> 网络号+主机号。<br><strong>形式：</strong> 数字 <a class="btn-beautify button--animated " target="_blank" rel="noopener" href="http://ip.chinaz.com/?C3VK=188241" 
+  title="IP地址查询"><span>IP地址查询</span></a>  <br><strong>作用：</strong> 编码/门牌号（机器识别）</p>
+<ul>
+<li><strong>IPv4</strong>（IPv4地址）：一个32位二进制数点分4段后的十进制写法（a.b.c.d）。现阶段主要使用。</li>
+<li><strong>IPv6</strong>（IPv6地址）：长度为128b（IPv4地址长度的4倍），解决IPv4地址不够用的问题。</li>
+</ul>
+<div class="justified-gallery"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghn4ka3kt5j31ho0oswjo.jpg" alt="IP地址分类" width="70%"><img title="" src="https://pic4.zhimg.com/v2-5fb3008febf75e96adc1e0d98e72cf23_r.jpg" alt="IP地址用途" width="70%">
+          </div>
+</div></div>
+<p>关于分类寻址、子网寻址、子网掩码、广播地址见<a target="_blank" rel="noopener" href="https://lpyexplore.blog.csdn.net/article/details/108935757">IP地址的划分及其分类-「零一」</a>；<br>关于特殊IP地址、子网划分、超网划分见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43625577/article/details/84728675">IP地址分类以及网络地址的计算-浅浅</a>。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="1-4"><p><strong><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E4%BA%92%E8%81%94%E7%BD%91">互联网(internet)</a></strong>：通用名词，泛指能彼此通信的设备组成的网络。包括因特网、万维网、广域网、城域网、局域网、内部网等各种网络(computer network)。<br>
+<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://wanweibaike.net/wiki-%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C" 
+  title="计算机网络类型"><span>计算机网络类型</span></a></p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>网络拓扑结构：设备互联的方式（物理层）</span></div>
+    <div class="hide-content"><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/starshinning975/article/details/53511343">种类</a>：星形<sub>集中式/放射状</sub>；总线型<sub>百足虫</sub>；环形；树形；网状<sub>分布式</sub>；复合/混合/杂合型<br>局域网常用总线型、环型、星型或树型结构；广域网多采用分布式或树型结构。<br><img src="https://img.wendangwang.com/pic/f584420810d19a3721631775/6-810-jpg_6-1080-0-0-1080.jpg" width="70%" alt="复合拓扑结构"></p>
+</div></div>
+<p><strong>因特网(Internet)</strong>：专有名词，特指全球最大的互联网（采用TCP/IP协议族），因其应用广泛，也用“互联网”指“因特网”。线路、协议以及通过TCP/IP协议实现数据电子传输的硬件和软件的集合体。提供的主要服务有万维网(WWW)、文件传输(FTP)、电子邮件E-mail、远程登录(Telnet)等。使用操作系统和各种软件(APP)去使用网络上的各种服务和资源（应用层）</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>WWW与HTTP</span></div>
+    <div class="hide-content"><ul>
+<li>万维网Web(World Wide Web,WWW)：因特网中的web服务<sub>(万维网不等于互联网/因特网)</sub>。是一个由许多互相链接的超文本组成的系统，通过互联网访问。是一个分布式超媒体系统(超文本系统的扩充)。
+<ul>
+<li><strong>统一资源定位符URL(Uniform Resource Locator)</strong>：万维网里的可访问对象(资源)的标识。是对因特网上的资源的位置和访问方法的一种简洁表示。<br><strong>格式：</strong> &lt;协议&gt;://&lt;主机&gt;<sub>(主机的域名)</sub>:&lt;端口&gt;/&lt;路径&gt;</li>
+<li>超文本：一个超文本由多个信息源链接组成。万维网的基础。<br>超链接：超文本内由一文件连接至另一文件的链接。<br>超媒体：包括图形、声音效果、电影、文本和超链接的一种非线性信息媒体。</li>
+<li><strong>超文本传输协议/明文传输协议HTTP(Hypertext Transfer Protocol)</strong>：万维网在服务器端和客户端<sub>运行在主机中的浏览器</sub>之间传输资源<sub>所有的www文件</sub>的协议。（应用层）<br><strong>文件传送协议FTP(File Transfer Protocol)</strong>：用户可以使用FTP客户端通过FTP协议访问位于FTP服务器上的资源。FTP客户程序用来获取文件的传送服务。<br><strong>简单邮件传送协议SMTP</strong>，邮件读取协议POP3和IMAP4<br><strong>远程终端协议Telnet</strong><br><strong>动态主机配置协议(DHCP)</strong><br><strong>简单网络管理协议(SNMP)</strong></li>
+<li><strong>⭐超文本标记语言HTML(Hypertext Markup Language)</strong>：万维网的核心语言，用来描述万维网文档（页面）。</li>
+<li>万维网的信息检索系统（搜索引擎）：万维网网页关键词索引数据库。</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<p><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://blog.51cto.com/dzlhre/1709982?xiangguantuijian&11" 
+  title="深入理解HTTP协议及原理分析"><span>深入理解HTTP协议及原理分析</span></a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h1 id="一-网站框架"><a class="markdownIt-Anchor" href="#一-网站框架"></a> 一、网站框架</h1>
+<h2 id="一网站相关概念"><a class="markdownIt-Anchor" href="#一网站相关概念"></a> （一）网站相关概念</h2>
+<div class="tabs" id="0"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#0-1">4-静态与动态的概念</button></li><li class="tab"><button type="button" data-href="#0-2">前端与后端的概念</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="0-1"><p>html：结构标签。超文本标记语言HTML把各种标签嵌入到万维网页面中，构成HTML文档。浏览器按HTML文档中的标签以及显示器的尺寸和分辨率大小重新排版并显示出页面。<br>
+标签：形如<code>&lt;p&gt;</code> <code>&lt;/p&gt;</code>，用于排版。</p>
+<ul>
+<li>
+<p>静态Web文档：文档创作完后存放在web服务器中，用户浏览时文档内容不会改变。服务器内容与终端用户接收到的版本是一样的，原始的源码文件已经提前编译好了，源码在每次请求后都不会变化。</p>
+</li>
+<li>
+<p>动态Web文档：有浏览器的请求时，web服务器根据浏览器发来的数据临时动态创建HTML文档。与动态网站互动时，大量的内容会经常改变。与静态的区别主要在于文档内容的生成方式不同。</p>
+</li>
+<li>
+<p>活动Web文档：web服务器返回一段程序副本在浏览器端运行。Java技术是活动文档技术的一部分。</p>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="0-2"><p><strong>前台</strong>：用户使用，<strong>展示</strong>页面信息。<br>
+<strong>后台</strong>：网站开发人员使用，（身份验证后）<strong>管理</strong>控制前台。</p>
+<ul>
+<li><strong>CMS</strong>：动态网站的后台。内容的创作人员、编辑人员、发布人员使用内容管理系统(Content Management System)来提交、修改、审批、发布到网站上的内容。</li>
+</ul>
+<p><strong>前端(Frontend)</strong>：展现给用户浏览的网站前台部分（Web页面或APP界面的结构、外观和交互）的代码。<br>Web前端标记语言=<code>HTML</code>+<code>CSS</code>+<code>JavaScript</code><sub>以及衍生出来的各种技术、框架、解决方案（如<code>HTML5</code>、<code>CSS3</code>）</sub></p>
+<ul>
+<li><strong>UI</strong>：用户界面(User Interface)美工，视觉优化。</li>
+<li><strong>运营</strong>：内容的发布和引流推广。</li>
+</ul>
+<p><strong>后端(Backend)</strong>：用户不可见的网站逻辑部分，支撑前台内容实现和数据调用，进行服务器性能（访问稳定性、加载速度等）和数据库存取（评论系统、账户系统、推送系统等）的管理。<br>后端语言有<code>PHP</code>、<code>ASP</code>、<code>JSP</code>等。<br>
+开源：源码公开，相当于免费。</p>
+<ul>
+<li><strong>运维</strong>：运行环境的维护。对网络、服务器、数据库、硬件配置的安全保障、运行维稳、故障修理、架构升级等</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="二网站框架的选择"><a class="markdownIt-Anchor" href="#二网站框架的选择"></a> （二）网站框架的选择</h2>
+<h3 id="a-使用现成框架最省心"><a class="markdownIt-Anchor" href="#a-使用现成框架最省心"></a> A 使用现成框架（最省心）</h3>
+<p>从数据处理方式分类，按操作难度排序，可分为动态网站和静态网站。</p>
+<div class="tabs" id="a"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#a-1">第三方平台(非独立)</button></li><li class="tab"><button type="button" data-href="#a-2">动态网站(花钱省心)</button></li><li class="tab"><button type="button" data-href="#a-3">静态网站(经济独立)</button></li><li class="tab"><button type="button" data-href="#a-4">半动态的静态网站</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="a-1"><p>在<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://top.chinaz.com/hangye/index_zonghe_boke.html#obj_4" 
+  title="博客网站排名"><span>博客网站排名</span></a>里可以看见主流博客网站和社交网站。<br>在这些公共平台上只能发表平台支持的内容，网页样式和域名的定制性、独特性很差，还有登录限制等等，主权在平台方手里。</p>
+<ul>
+<li>
+<p>如果只是想有一个发布文章/图片/……的地方而对功能拓展等网页设计方面没有更高要求，或者更希望在读者用户流量聚集的地方运营发展，那么第三方平台会更适合。一般都会提供现成的写作工具和数据分析工具，并帮你做好SEO优化。</p>
+</li>
+<li>
+<p>如果更想真正独立管理一个网站，或者目的是做作品集、做商业品牌，那么从长远发展和能力锻炼的角度看，更好的建议是不要选择第三方平台，而是自己搭建网站。</p>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="a-2"><p>有前端后端，登录后台来管理，前台通过数据库来查询、调用、展示网站的叫“动态”。</p>
+<ul>
+<li>缺点：配置用来安装后端服务和数据库的独立服务器（要买一个单独的云服务器），前端渲染内容的步骤更多（可能需要对访问加速进行配置），服务器要管理调优（负担后端维护成本）</li>
+<li>优点：自定义功能插件丰富。要登录控制台编写文章，随写随发布，不需要it技术基础。</li>
+</ul>
+<p>￥域名+￥服务器+设计搭建+部署服务器 = 一次搭建，终身享用，在线更新</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>动态框架平台</span></div>
+    <div class="hide-content"><p>主流 成熟 采用HTML编辑器：</p>
+<ul>
+<li>⭐<code>WordPress</code>（博客程序）<br><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://wordpress.org/" 
+title="WordPress"><span>WordPress</span></a>免费开源的建站系统，除个性化博客外还可做企业站、门户站、商场、批发网站等，扩展性强。较臃肿，对主机配置有要求，要加速就要做优化设置。“42% of the web uses WordPress, from hobby blogs to the biggest news sites online.”</li>
+<li><code>discuz</code>（论坛程序）<br><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://www.discuz.net/portal.php?mod=list&catid=8" 
+title="DISCUZ!"><i class="outline"></i><span>DISCUZ!</span></a>腾讯旗下的一套通用的社区论坛软件系统。“一个以社区为基础的专业建站平台，让论坛（BBS）、社交网络（SNS）、门户（Portal）、群组（Group）、开放平台（Open Platform）应用充分融合于一体，几乎适用于所有需要互动和交流功能的网站，尤其是已经具备相当规模，且经常因为服务器资源耗尽、安全问题或其他原因而损失人气的中大型应用案例。”</li>
+</ul>
+<p>国内 开源 采用MarkDown语法：</p>
+<ul>
+<li><code>Typecho</code>（博客程序）<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="http://typecho.org/" 
+title="Typecho"><span>Typecho</span></a> 微缩版/个性版WordPress。适合做简单记录的个人站点。</li>
+<li><code>zblog</code>（博客程序）<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://docs.zblogcn.com/php/#/" 
+title="Z-BlogPHP"><i class="outline"></i><span>Z-BlogPHP</span></a> <a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://docs.zblogcn.com/asp/#/" 
+title="Z-BlogASP"><i class="outline"></i><span>Z-BlogASP</span></a>一些主题、插件付费。</li>
+<li><code>Emlog</code>（博客程序）<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://gitee.com/snowsun/emlog-docs" 
+title="Emlog"><i class="outline"></i><span>Emlog</span></a></li>
+<li><code>xiunobbs</code>（论坛程序）<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="http://www.zssv.cn/forum-2.htm" 
+title="Xiuno BBS轻论坛"><i class="outline"></i><span>Xiuno BBS轻论坛</span></a></li>
+</ul>
+<p>国外 开源：</p>
+<ul>
+<li><code>Halo</code>（博客程序）<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://docs.halo.run/zh/install/prepare" 
+title="Halo"><i class="outline"></i><span>Halo</span></a><br>
+更多国外开源CMS建站系统请移步<a target="_blank" rel="noopener" href="https://itsfoss.com/open-source-cms/">Open Source CMS: 12 Great Website Creation Tools</a>选择。</li>
+</ul>
+<p>其他建站需求的动态网站程序参见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24101769">做网站有那些网站程序？-寒龙亦</a>。</p>
+</div></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="a-3"><p>纯前端，直接生成纯.html网页文件的叫“静态”。<br>没有独立服务器（不需要买云服务器），而是利用支持HTTP(S)协议的文件存储PaaS服务（如阿里云OSS）发布内容，所有内容是静态的。如果需要一些动态功能如“评论”，则必须借助第三方服务。<br>
+源代码（技术门槛）：对代码、Linux、JavaScript等网页相关技术有自我学习能力。<br>编译/渲染方式：手动执行命令将写好的文章转换成最终的网页文件。</p>
+<ul>
+<li>缺点：功能受限。没有网站后台、没有文章编辑器，几乎都基于“代码”来设置和操作。</li>
+<li>优点：对自食其力者来说性价比最高。适于技术宅、程序员、工程师群体。</li>
+</ul>
+<p>￥域名+网页文件托管平台 = 代码搞定一切</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>静态博客框架</span></div>
+    <div class="hide-content"><ul>
+<li>
+<p><code>NodeJS</code>+<code>Hexo</code><br><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/" 
+title="Hexo"><span>Hexo</span></a> 是基于Node.js的静态博客网站的框架，使用Markdown（或其他渲染引擎）解析文章，可便捷生成静态网页托管在GitHub上。相较于jekyll/octopress博客框架，Hexo的编译更快、部署更简单（因为jekyll基于Ruby语言，配置麻烦），中文支持更好（因为作者来自中国台湾）。<br>Node.js基于Chrome JavaScript运行在服务端。</p>
+</li>
+<li>
+<p><code>Rudy</code>+<code>RudyGems</code>+<code>Linux/Unix/Mac OS X</code>+<code>NodeJS/其他JavaScript环境</code>+<code>Python</code>+<code>jekyll</code><br><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="http://jekyllcn.com/docs/home/" 
+title="jekyll"><span>jekyll</span></a> 基于Ruby语言开发的Jekyll是很多技术人员的选择。</p>
+</li>
+<li>
+<p><code>Hugo</code><br><a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://www.gohugo.org/doc/" 
+title="Hugo"><span>Hugo</span></a> 基于Go语言开发的Hugo</p>
+</li>
+</ul>
+</div></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="a-4"><p>（可动态更新，但依赖于后台构建系统）</p>
+<div class="tag link"><a class="link-card" title="Growth：全栈增长工程师指南" target="_blank" rel="noopener" href="https://www.bookstack.cn/read/growth-fullstack/3220"><div class="left"><img src="https://static.bookstack.cn/projects/growth-fullstack/marketing/growth-paper.jpeg"/></div><div class="right"><p class="text">Growth：全栈增长工程师指南</p><p class="url">https://www.bookstack.cn/read/growth-fullstack/3220</p></div></a></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<style> table th:first-of-type { width: 18%; } </style>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><br></th>
+<th style="text-align:center">动态网站</th>
+<th style="text-align:center">静态网站</th>
+<th style="text-align:center">半动态的静态网站</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">价格￥</td>
+<td style="text-align:center">几十~几百上千</td>
+<td style="text-align:center">几~上百</td>
+<td style="text-align:center">几~几十<sub>(依赖于更新频率)</sub></td>
+</tr>
+<tr>
+<td style="text-align:center">技术门槛</td>
+<td style="text-align:center">⭐</td>
+<td style="text-align:center">⭐⭐</td>
+<td style="text-align:center">⭐⭐⭐</td>
+</tr>
+<tr>
+<td style="text-align:center">运维精力</td>
+<td style="text-align:center">⭐⭐⭐</td>
+<td style="text-align:center">⭐</td>
+<td style="text-align:center">⭐</td>
+</tr>
+<tr>
+<td style="text-align:center">数据存储</td>
+<td style="text-align:center">数据库</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">基于git的数据库</td>
+</tr>
+</tbody>
+</table>
+<p>关于选择动态还是静态，详细解说参见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35764312">个人博客如何选择Typecho和Hexo？-明月登楼</a></p>
+<div class="note warning simples modern"><p>决定安装某个框架之前要多搜索用户经验，了解它的搭建、运行与维护方式，评估这个框架和这个平台对于自己的需求和能力的合适程度，特别注意导入导出资源的功能是否有门槛，所用的前端语言是否在个人能力范围内、所需配置环境是否在硬件性能条件内。否则，一旦在搭建后期发现某个平台不符合自己的实际情况，就要转移数据库，而很多平台之间的导出导入都是有技术成本和时间成本的。<br>不过也不必犹豫不决，保险的做法是选择最多人在讨论的（不一定是最多人在用），方便交流并解决问题。</p>
+</div>
+<h3 id="b-自己开发框架最自由"><a class="markdownIt-Anchor" href="#b-自己开发框架最自由"></a> B 自己开发框架（最自由）</h3>
+<p>利用自己熟悉的语言，自己开发前后端，再把项目部署到私人服务器上。<br>
+仅限有技术基础者选择。除非是想入行/是大师球，建议外行者不要走向开发者的漫漫头秃路。（所以在<code>clone</code>优秀开发者的项目时一定要点<code>star</code>⭐大力支持+感谢鸭！）</p>
+<hr>
+<h1 id="二-站点访问配置"><a class="markdownIt-Anchor" href="#二-站点访问配置"></a> 二、站点访问配置</h1>
+<p>访问 <a target="_blank" rel="noopener" href="https://www.fgggh.cn">https://www.fgggh.cn</a> 的过程：<br>
+方式A.输入域名，传递给DNS(域名解析)服务器，解析成IP地址，再访问站点。<br>
+方式B.输入IP地址，访问网站。</p>
+<h2 id="一域名服务相关概念"><a class="markdownIt-Anchor" href="#一域名服务相关概念"></a> （一）域名服务相关概念</h2>
+<div class="tabs" id="2"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#2-1">一定要买域名吗？</button></li><li class="tab"><button type="button" data-href="#2-2">5-域名系统</button></li><li class="tab"><button type="button" data-href="#2-3">5-域名解析与CANNME</button></li><li class="tab"><button type="button" data-href="#2-4">6-网络安全与加密</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="2-1"><p>如果选择用Github Page、Gitee等能提供一个域名地址的平台来搭建，可以不买；<br>
+如果想要一个简洁易记、有标志性的域名地址就买；多数其他建站方案都要自己买域名。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="2-2"><p><strong>域名系统(Domain Name System,DNS)</strong>：为方便记忆网址产生的管理域名和IP地址之间的有效关系的系统（应用层）</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>域名</span></div>
+    <div class="hide-content"><p>(Domain Name,DN)<br>
+<strong>作用：</strong> 将一个IP地址关联到一组有意义的字符(URL)上。<br><strong>形式：</strong> <a target="_blank" rel="noopener" href="https://www.fgggh.cn/">https://www.fgggh.cn/</a> 字符（人类惯用）</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>域名的树状层次等级结构</span></div>
+    <div class="hide-content"><ul>
+<li>http：传输内容易被嗅探(保密性)、篡改、伪造(真实性)、中断，域名劫持和域名欺骗(完整性)，会被标为“不安全”。</li>
+<li>https：安全超文本传输协议(HTTP over SSL/TLS)。添加了一层SSL(Secure Sockets Layer，安全套接层)或TLS(Transport Layer Security,传输层安全协议)<br><small>（在阿里云等服务提供商购买一年的https服务约￥2000。借助Github Page的便利可以免费实现https级别的网站。）</small></li>
+<li><strong>主机名(host)</strong>：电脑端<code>www</code>,<code>bbs</code>移动端<code>m</code>,<code>wap</code></li>
+<li>前缀次级域名：（门面）网站的入口/第一印象/记忆名称。一般购买一个域名就是购买一个<strong>二级域名(SLD)</strong> 的管理权，即随意设置<strong>三级域名</strong>、<strong>四级域名</strong>……<br>域名中有几个<code>.</code> ，就称之为几级域名</li>
+<li>后缀<strong>顶级域名(Top-Level Domain,TLD)</strong>：该域名所属服务器。<br>常见的 <code>.com</code> <code>.cn</code> <code>.net</code> <code>.org</code> <code>.gov</code> <code>.edu</code><br>小众的 <code>.xyz</code> <code>.me</code> <code>.io</code>……</li>
+<li><strong>根域名</strong>：所有域名尾部都有一样的根域名<code>.root</code>，平时是省略的</li>
+</ul>
+</div></div>
+</div></div>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>域名服务器/DNS服务器/域名解析服务器</span></div>
+    <div class="hide-content"><p>(Domain Name Sever,DNS)<br>
+<strong>作用：</strong> 让域名地址和IP地址对应。<br><strong>概念：</strong> 将域名解析成IP地址以供网络层使用的服务由DNS服务器完成。<br>与域名的分级结构对应，DNS系统也是一个树状层级式结构，不同级别的域名由不同的域名服务器来解析。</p>
+<ol>
+<li>
+<p>根域名服务器，全世界IPv4根域名服务器只有13台（名字分别为A至M），1个为主根服务器在美国，其余12个均为辅根服务器。负责管理世界各国的域名信息。</p>
+</li>
+<li>
+<p>顶级域名服务器/TLD域名服务器，即相关国家域名管理机构的数据库，如中国互联网络信息中心(CNNIC)。</p>
+</li>
+<li>
+<p>权威域名服务器和ISP的缓存服务器。提供域名注册、单个域名的解析配置等服务，如万网、DNSpod等权威DNS托管商。</p>
+</li>
+<li>
+<p>本地域名服务器/递归DNS(Local DNS)。自己主机设置的DNS，默认是宽带运营商的配置。通过询问正确的权威DNS服务器来确定域名的IP地址，然后缓存该IP地址。<br>
+<strong>公共DNS</strong><br>
+<strong>概念：</strong> 由大的厂商和机构提供的公开解析服务，可设为本地DNS。<br><small>如谷歌DNS<code>8.8.8.8</code>，国内114DNS的<code>114.114.114.114</code>，参见<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34826522">公共DNS哪个好（速度快、稳定）？</a></small><br>
+<strong>作用：</strong> 提高网络冲浪体验。</p>
+</li>
+</ol>
+</div></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="2-3"><p>域名解析<br><strong>概念：</strong> 将域名指向具体的网站服务器。<br><strong>作用：</strong> 让访客通过这个域名可以访问服务器上的网站，或达到访问加速。<br><strong>过程（递归）：</strong> 手动把域名地址和IP地址的对应关系写到权威DNS服务器上。<br>
+主机通过域名请求某网页时，查找域名对应IP记录的步骤是主机缓存——本地hosts文件——本地DNS服务器的区域文件与缓存，若无则再从最近的根服务器查找到对应的顶级域名服务器、二级域名服务器……找到IP则将查询结果返回本地DNS服务器，本地DNS再将解析结果返回客户端。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/65757b5c0762">CANME</a>（CANME地址）：主机/服务器/托管商提供的IP地址。<br>主机商提供的IP地址会因为网络攻击暂不可用，CNAME对应的IP地址可能会变。把域名解析到CNAME地址，IP地址变化时就不需要重新修改域名解析了。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="2-4"><p>DNS污染：嗅探网页信息/贴广告弹窗<br>DNS劫持：把网页指向另外的地址</p>
+<p>对称密码体制(Symmetric-Key Encryption)：加密密钥与解密密钥相同。<br>
+公钥密码体制(Public-Key Encryption)：加密密钥与解密密钥不同。</p>
+<ul>
+<li><strong>SSH</strong>：本地生成的一对秘钥，<strong>私钥（~/.ssh/id_rsa）</strong> 和<strong>公钥（~/.ssh/id_rsa.pub）</strong>。<br>GitHub要求每次推送代码都要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用非对称加密的ssh公钥（GitHub上）与私钥（本地电脑）的配对来验证。</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="二域名解析过程"><a class="markdownIt-Anchor" href="#二域名解析过程"></a> （二）域名解析过程</h2>
+<h3 id="1-域名解析服务器的选择"><a class="markdownIt-Anchor" href="#1-域名解析服务器的选择"></a> 1. 域名解析服务器的选择</h3>
+<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://console.dnspod.cn/dns" 
+  title="DNSPod"><span>DNSPod</span></a>
+<a class="btn-beautify button--animated " target="_blank" rel="noopener" href="https://www.aliyun.com/product/dns?source=5176.11533457&userCode=28kqeewo" 
+  title="阿里云DNS"><span>阿里云DNS</span></a>
+<h3 id="2-域名解析记录"><a class="markdownIt-Anchor" href="#2-域名解析记录"></a> 2. 域名解析记录</h3>
+<div class="tabs" id="y"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#y-1">记录类型</button></li><li class="tab"><button type="button" data-href="#y-2">主机记录</button></li><li class="tab"><button type="button" data-href="#y-3">线路</button></li><li class="tab"><button type="button" data-href="#y-4">TTL</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="y-1"><table>
+<thead>
+<tr>
+<th style="text-align:center">记录类型</th>
+<th>含义</th>
+<th>记录值填写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td>（地址记录/IP指向）将域名指向一个IP地址。</td>
+<td>服务器 IP</td>
+</tr>
+<tr>
+<td style="text-align:center">CNAME</td>
+<td>（别名指向）将一个域名指向另一个域名。</td>
+<td>空间商提供的域名</td>
+</tr>
+<tr>
+<td style="text-align:center">AAAA</td>
+<td>指定主机名/域名对应的IPv6地址记录。</td>
+<td>解析到 IPv6 的地址</td>
+</tr>
+<tr>
+<td style="text-align:center">NS</td>
+<td>（Name Server）向下授权 指定 <strong>该域名的解析权</strong> 。<br>购买域名后，NS处默认的NS记录指向 <strong>域名提供商</strong> 。<br>想换DNS服务商时，修改NS记录域名授权对象即可。</td>
+<td>DNS服务器</td>
+</tr>
+<tr>
+<td style="text-align:center">MX</td>
+<td>（邮件交换记录）要设置邮箱让邮箱能收到邮件时添加。</td>
+<td>邮件服务器的IP地址<br>或企业邮局提供的域名</td>
+</tr>
+<tr>
+<td style="text-align:center">TXT</td>
+<td>大都用来做SPF记录<small>（Google、QQ等企业邮箱的反垃圾邮件设置）</small></td>
+<td>255长度内的任何东西</td>
+</tr>
+<tr>
+<td style="text-align:center">显性URL</td>
+<td>从一个地址301重定向到另一个地址时添加。</td>
+<td>要跳转到的网址</td>
+</tr>
+<tr>
+<td style="text-align:center">隐性URL</td>
+<td>不会改变地址栏中的域名。</td>
+<td>要引用内容的网址</td>
+</tr>
+</tbody>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="y-2"><table>
+<thead>
+<tr>
+<th style="text-align:center">设置类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">www</td>
+<td>解析域名为<code>www.fgggh.cn</code></td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td>直接解析主域名<code>fgggh.cn</code></td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>泛域名解析，用于匹配其他所有域名</td>
+</tr>
+</tbody>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="y-3"><table>
+<thead>
+<tr>
+<th style="text-align:center">线路名称</th>
+<th>选择</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">默认</td>
+<td>必须添加，否则只有单独指定的线路才能访问网站。如果双线解析，建议「默认」。若空间商只提供了一个IP地址或域名，选择「默认」。</td>
+</tr>
+<tr>
+<td style="text-align:center">联通</td>
+<td>单独为「联通用户」指定服务器 IP，其他用户依然访问「默认」。</td>
+</tr>
+<tr>
+<td style="text-align:center">搜索引擎</td>
+<td>指定一个服务器IP让蜘蛛抓取。</td>
+</tr>
+</tbody>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="y-4"><p>（Time To Live）域名解析的生效时间。<br>
+指地方dns缓存域名记录信息的时间，缓存失效后会再次到域名解析服务商获取记录值。<br>
+数值越小，修改记录生效时间越快。添加新的解析记录，生效时间5分钟。修改已经添加的解析记录，生效时间1小时。修改为万网DNS服务器后首次进行域名解析，生效时间1小时。国内域名DNS修改，修改时间最长6小时。国际域名DNS修改，修改时间最长48小时。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">TTL变更时间</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">600（10分钟）</td>
+<td>正常情况下使用。</td>
+</tr>
+<tr>
+<td style="text-align:center">60（1分钟）</td>
+<td>若经常修改IP，修改记录一分钟即可生效。<br>长期使用，解析速度会略受影响。</td>
+</tr>
+<tr>
+<td style="text-align:center">3600（1小时）</td>
+<td>IP极少变动（一年几次）的建议选择，解析速度快。<br>如果要修改IP，提前一天改为 60，即可快速生效。</td>
+</tr>
+</tbody>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<p>判断域名解析是否生效：<kbd>Win</kbd>+<kbd>R</kbd> → 输入<code>cmd</code> → 输入 <code>ping https://www.fgggh.cn</code> → 出现ip √</p>
+<hr>
+<h1 id="三-云存储配置"><a class="markdownIt-Anchor" href="#三-云存储配置"></a> 三、云存储配置</h1>
+<h2 id="一图床"><a class="markdownIt-Anchor" href="#一图床"></a> （一）图床</h2>
+<p>将几十KB到几M的图片/文件存放到专用仓库里，再在网页中使用一行专门用于显示图片的代码，即可不占用网站仓库库存并快速显示图片。</p>
+<a class="btn-beautify button--animated " href="/" 
+  title="七牛云"><span>七牛云</span></a><a class="btn-beautify button--animated " href="/" 
+  title="腾讯云"><span>腾讯云</span></a><a class="btn-beautify button--animated " href="/" 
+  title="iPic"><span>iPic</span></a><a class="btn-beautify button--animated " href="/" 
+  title="picGo"><span>picGo</span></a>
+<h2 id="二云服务器-虚拟主机空间"><a class="markdownIt-Anchor" href="#二云服务器-虚拟主机空间"></a> （二）云服务器 // 虚拟主机空间</h2>
+<hr>
+<h1 id="四-环境搭建"><a class="markdownIt-Anchor" href="#四-环境搭建"></a> 四、环境搭建</h1>
+<h2 id="一服务器软件-版本控制系统vcs"><a class="markdownIt-Anchor" href="#一服务器软件-版本控制系统vcs"></a> （一）服务器软件、版本控制系统（VCS）</h2>
+<div class="tabs" id="f"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#f-1">Git(Git Bash)</button></li><li class="tab"><button type="button" data-href="#f-2">SVN</button></li><li class="tab"><button type="button" data-href="#f-3">Mercurial</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="f-1"><p>Git（+GitHub/<a target="_blank" rel="noopener" href="https://gogs.io/">Gogs</a>/Gitee(码云)/<a target="_blank" rel="noopener" href="https://coding.net/">Coding.net</a>，<a target="_blank" rel="noopener" href="https://bitbucket.org/">Bitbucket</a>, <a target="_blank" rel="noopener" href="https://gitlab.com/">GitLab</a>，<a target="_blank" rel="noopener" href="https://code.google.com/">Google Code</a>, <a target="_blank" rel="noopener" href="https://www.springloops.io/">Springloops/Buddy</a>）</p>
+<p><strong>Git</strong> 是Linux之父创造的分布式版本控制系统，一开始便用作Linux内核代码的管理。具有分布式/去中心化/跨平台的架构【本地仓库（<code>git init</code>）+服务器+远端下载（<code>git clone</code>）】、便捷高效的分支管理的优势。通俗来说，Git提供一个有时光轴功能的代码仓库（本地有版本库），可以在仓库的任意时间点创建分支（<code>git branch</code>）来开发不同功能，也可以在代码丢失、误操作时恢复到任一时间点（<code>git reset</code>）来拯救项目。<br>
+<strong>Git Bash</strong> 是git的命令行程序，可以作为<code>cmd</code>、<code>Windows PowerShell</code>的替代。脚本、命令的执行均在Git Bash上运行。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="f-2"><p>svn（+svnchina/Coding/Springloops/Google Code）</p>
+<p>集中式代码版本管理方式，适用于企业管控保护性代码。联网工作（版本库在中央服务器）。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="f-3"><p>Mercurial（<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20403480">hg</a>） +BitBucket</p>
+<p>轻量级分布式VCS。开发语言<code>C</code>/<code>C++</code> <code>Python</code>。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="二前端语言"><a class="markdownIt-Anchor" href="#二前端语言"></a> （二）前端语言</h2>
+<a class="btn-beautify button--animated " href="/" 
+  title="HTML"><span>HTML</span></a> + <a class="btn-beautify button--animated " href="/" 
+  title="CSS"><span>CSS</span></a> + <a class="btn-beautify button--animated " href="/" 
+  title="JavaScript"><span>JavaScript</span></a>
+<h2 id="三前端语言运行环境"><a class="markdownIt-Anchor" href="#三前端语言运行环境"></a> （三）前端语言运行环境</h2>
+<p>Node   JavaScript</p>
+<h2 id="四包管理工具"><a class="markdownIt-Anchor" href="#四包管理工具"></a> （四）包管理工具</h2>
+<a class="btn-beautify button--animated " href="/" 
+  title="npm"><span>npm</span></a> <a class="btn-beautify button--animated " href="/" 
+  title="cnpm"><span>cnpm</span></a> <a class="btn-beautify button--animated " href="/" 
+  title="yarn"><span>yarn</span></a>
+<h2 id="五代码编辑器"><a class="markdownIt-Anchor" href="#五代码编辑器"></a> （五）代码编辑器</h2>
+<a class="btn-beautify button--animated " href="/" 
+  title="VScode"><span>VScode</span></a> <a class="btn-beautify button--animated " href="/" 
+  title="nopad++"><span>nopad++</span></a> <a class="btn-beautify button--animated " href="/" 
+  title="Webstrom"><span>Webstrom</span></a> 
+<p>不推荐用记事本编辑代码，容易出现缩进错误。</p>
+<h2 id="六代码托管平台"><a class="markdownIt-Anchor" href="#六代码托管平台"></a> （六）代码托管平台</h2>
+<div class="tabs" id="d"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#d-1">适合个人：</button></li><li class="tab"><button type="button" data-href="#d-2">主打企业：</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="d-1"><ul>
+<li><strong>GitHub</strong>：微软收购（美国立场） <strong><a target="_blank" rel="noopener" href="https://about.gitlab.com/">GitLab</a></strong>：从前有私库优势</li>
+</ul>
+<p>GitHub全球最流行，主打 <mark>开源项目的推广分享</mark>，适合想让更多人参与代码改进的项目（包括Linux、node.js、JQuery、nginx的开源项目），私有库同时协作工作者只能有三人。<br>
+Web端下载仓库（<code>git clone</code>）来研究学习，参与（<code>fork</code>）某个开源项目的改进并向仓库所有者申请合并（<code>pull request</code>），项目被<code>Star</code>可带来offer。<br>
+<strong><a href="https://link.zhihu.com/?target=https%3A//pages.github.com/">GitHub Page</a></strong> 是由GitHub中的<code>Repository</code>（仓库/项目）直接创建的网页，用<code>Ruby on Rails</code>输出静态页面。在本地编辑<code>Repo</code>中的内容，上传部署到GitHub上，则GitHub Page也能够对应更新。</p>
+<div class="tag link"><a class="link-card" title="Github官方指南" target="_blank" rel="noopener" href="https://docs.github.com/cn/github"><div class="left"><img src="https://pngimg.com/uploads/github/github_PNG16.png"/></div><div class="right"><p class="text">Github官方指南</p><p class="url">https://docs.github.com/cn/github</p></div></a></div>
+<ul>
+<li><strong>Gogs</strong>：类Github的开源文件／代码管理系统</li>
+</ul>
+<p><mark>易部署，占用小，启动快，免费</mark>；托管/issue/wiki；相比gitlab无集成CI、数据备份和恢复、API、各种插件</p>
+<ul>
+<li><strong>Gitee<a href="https://link.zhihu.com/?target=https%3A//gitee.com/">码云</a></strong>：开源中国旗下</li>
+</ul>
+<p>工信部支持，本土受众语境。<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/384541326/answers/updated">备选同步托管</a>，做==国内访问的镜像==。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="d-2"><ul>
+<li><strong>Coding</strong>→<a target="_blank" rel="noopener" href="https://dev.tencent.com/">腾讯云开发者平台</a></li>
+</ul>
+<p>主打小团队/企业协作开发私有项目，主推Web IDE的开发模式，企业版通过与腾讯云的合作提供免费及时部署调试的环境，综合了项目、任务、成员、文件、讨论的管理，Wiki等功能。相比GitHub来说：- 国内访问友好。 可免费创建2个私有仓库。缺点：服务不稳定</p>
+<ul>
+<li>
+<p>用 <strong>AngularJS</strong> 编写，git/svn代码托管</p>
+</li>
+<li>
+<p><strong><a target="_blank" rel="noopener" href="https://code.aliyun.com/">阿里云Code托管平台</a></strong></p>
+</li>
+<li>
+<p><strong><a target="_blank" rel="noopener" href="https://xiaolvyun.baidu.com/">百度效率云</a></strong></p>
+</li>
+<li>
+<p><strong><a target="_blank" rel="noopener" href="https://code.opensource.huaweicloud.com/">华为开源平台</a></strong></p>
+</li>
+<li>
+<p>面向AI研发的<strong><a target="_blank" rel="noopener" href="http://xn--Agit-9t5fs30aos9ch25c.ai">阿吉特云Agit.ai</a></strong></p>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<p>本地BLOG文件夹架构：<code>username.github.io</code>（网页文件，以Github平台为例，是部署到代码托管平台上的文件夹），<code>HEXO</code>（网页框架，以安装在本地的HEXO框架为例，内有网站主题等配置文件）</p>
+<hr>
+<h1 id="五-撰写发布文章"><a class="markdownIt-Anchor" href="#五-撰写发布文章"></a> 五、撰写发布文章</h1>
+<h2 id="一markdown标签语法"><a class="markdownIt-Anchor" href="#一markdown标签语法"></a> （一）Markdown标签语法</h2>
+<p>静态网站必须要用<code>md</code>格式撰写文章，必须要有支持<code>md</code>格式的文本编辑器。markdown是可以用普通文本编辑器编写的一种文本格式标记语法，语法简洁，用易懂易记的标签同时解决输入内容+排版格式+适配网页样式（完全兼容html）的任务，让作者更专注于创作文字而更少分心于配置样式。</p>
+<h2 id="二html标签语法"><a class="markdownIt-Anchor" href="#二html标签语法"></a> （二）HTML标签语法</h2>
+<p>超文本标记语言（Hyper Text Markup Language），html文档中使用的语法，格式规整严谨且通用。我们使用HTML标签来标记文章文字在网页中的结构样式，或实现markdown语法不支持的拓展样式或功能。</p>
+<h2 id="三撰写发布文章流程"><a class="markdownIt-Anchor" href="#三撰写发布文章流程"></a> （三）撰写发布文章流程</h2>
+<p>本地文件夹选择对应文件→<code>markdown</code>撰写保存→<code>git</code>同步</p>
+<h1 id="六-我的方案"><a class="markdownIt-Anchor" href="#六-我的方案"></a> 六、我的方案</h1>
+<p>我自己更倾向于在已有框架上的自由定制，并且考虑到服务器成本，最终选择了Hexo框架+Butterfly主题+Github托管的方案，在后续文章中会记录搭建的足迹。</p>
+</article><div class="post-end"><span class="post-end-i">—— 完 ——</span></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-a">作者 排版 /   </span><span class="post-copyright-info"><a href="2952068332@qq.com">惊蛰</a></span></div><div class="post-copyright__notice"><span class="post-copyright-c">原创   </span><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><span class="post-copyright-info">   </span><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处：<a href="https://waldenlak.github.io/post/01know&choice/" target="_blank">浮光河</a></span></div></div><div class="tag_share"><div class="post-meta__tag-list"><i class="iconfont icon-Paperclip"></i><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="http://www.wikihow.com/images/8/8e/Design-a-Logo-Step-15Bullet2.jpg" data-sites="weibo,wechat,douban,qq,twitter,linkedin,facebook"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/js/social-share.min.js" defer></script></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#todo"><span class="toc-text"> TODO</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#a-%E8%AF%9D%E9%A2%98%E5%89%8D%E8%A8%80"><span class="toc-text"> A 话题前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#b-%E5%90%8D%E7%A7%B0%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9E%84%E5%BB%BA%E9%80%89%E6%8B%A9"><span class="toc-text"> B 名称概念与构建选择</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text"> 计算机网络相关概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E7%BD%91%E7%AB%99%E6%A1%86%E6%9E%B6"><span class="toc-text"> 一、网站框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text"> （一）网站相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BD%91%E7%AB%99%E6%A1%86%E6%9E%B6%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> （二）网站框架的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#a-%E4%BD%BF%E7%94%A8%E7%8E%B0%E6%88%90%E6%A1%86%E6%9E%B6%E6%9C%80%E7%9C%81%E5%BF%83"><span class="toc-text"> A 使用现成框架（最省心）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%80%E8%87%AA%E7%94%B1"><span class="toc-text"> B 自己开发框架（最自由）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E7%AB%99%E7%82%B9%E8%AE%BF%E9%97%AE%E9%85%8D%E7%BD%AE"><span class="toc-text"> 二、站点访问配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text"> （一）域名服务相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-text"> （二）域名解析过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> 1. 域名解析服务器的选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%AE%B0%E5%BD%95"><span class="toc-text"> 2. 域名解析记录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E4%BA%91%E5%AD%98%E5%82%A8%E9%85%8D%E7%BD%AE"><span class="toc-text"> 三、云存储配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%9B%BE%E5%BA%8A"><span class="toc-text"> （一）图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%A9%BA%E9%97%B4"><span class="toc-text"> （二）云服务器 &#x2F;&#x2F; 虚拟主机空间</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text"> 四、环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9Fvcs"><span class="toc-text"> （一）服务器软件、版本控制系统（VCS）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%89%8D%E7%AB%AF%E8%AF%AD%E8%A8%80"><span class="toc-text"> （二）前端语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%89%8D%E7%AB%AF%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-text"> （三）前端语言运行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-text"> （四）包管理工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text"> （五）代码编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0"><span class="toc-text"> （六）代码托管平台</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E6%92%B0%E5%86%99%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0"><span class="toc-text"> 五、撰写发布文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80markdown%E6%A0%87%E7%AD%BE%E8%AF%AD%E6%B3%95"><span class="toc-text"> （一）Markdown标签语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8Chtml%E6%A0%87%E7%AD%BE%E8%AF%AD%E6%B3%95"><span class="toc-text"> （二）HTML标签语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%92%B0%E5%86%99%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B"><span class="toc-text"> （三）撰写发布文章流程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E6%88%91%E7%9A%84%E6%96%B9%E6%A1%88"><span class="toc-text"> 六、我的方案</span></a></li></ol></div></div></div></div><div class="wid" id="aside-content"><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%90%86%E8%AE%BA/"><span class="card-category-list-name">理论</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div></div></div></main><main class="after" id="after-inner"><div class="pag-post"><nav class="pag-post" id="pagination"><div class="prev-post pull-left"><a href="/post/hello-world/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div><div class="next-post pull-right"><a href="/post/02steps/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">建站02-详细搭建步骤与报错解决方案</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关内容</span></div><div class="relatedPosts-list"><div><a href="/post/03git&npm&hexo/" title="建站03-执行代码-git\npm\hexo常用执行命令"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t5.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-23</div><div class="title">建站03-执行代码-git\npm\hexo常用执行命令</div></div></a></div><div><a href="/post/bug-fix/" title="报错合集"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-06</div><div class="title">报错合集</div></div></a></div><div><a href="/post/02steps/" title="建站02-详细搭建步骤与报错解决方案"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-23</div><div class="title">建站02-详细搭建步骤与报错解决方案</div></div></a></div></div></div></div><div class="com"><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div></main><footer id="footer" style="background: #e4edff"><div id="footer-wrap"><div class="copyright">2021 &copy; 浮光河 - 雕刻我的构想，展览你的描绘</div><div class="framework-info"><span class="footer-info">Crafted with </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-info">-</span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-info"> by 惊蛰 子诺</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本站搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="查找你想要的内容" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async src="/js/fgh.js"></script><script async data-pjax src="/js/randombg.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script id="canvas_nest" defer="defer" color="201,214,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
