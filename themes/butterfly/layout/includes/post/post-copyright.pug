@@ -1,0 +1,84 @@
+- let author = page.author ? page.author : config.author
+- let authorHref = page.authorl ? page.authorl : `mailto:${config.email}`
+- let typeset = page.typeset ? page.typeset : config.typeset
+- let editor = page.editor ? page.editor : config.editor
+- let url = page.copy_url ? page.copy_url : page.permalink
+- let info = page.copyright_info ? page.copyright_info : _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, page.permalink, config.title)
+- let copy = page.copy_info ? page.copy_info : _p('post.copyright.copy_content', page.copy_url)
+- let license = page.license ? page.license : theme.post_copyright.license
+- let license_url = page.license_url ? page.license_url : theme.post_copyright.license_url
+if page.end == false
+  .post-end
+    span.post-end-i=_p('post.copyright.to')
+else
+  .post-end
+    span.post-end-i=_p('post.copyright.end')
+
+if theme.post_copyright.enable && page.copy_info == false
+  .post-copyright
+    if (page.author != page.typeset)
+      if (page.editor != page.typeset)
+        .post-copyright__author
+          span.post-copyright-a= _p('post.copyright.author') + " /   "
+          span.post-copyright-info
+            a(href=authorHref)=author
+        if page.typeset !== false
+          .post-copyright__typeset
+            span.post-copyright-a= _p('post.copyright.typeset') + " /   "
+            span.post-copyright-info
+              a=typeset
+        if page.editor !== false
+          .post-copyright__editor
+            span.post-copyright-a= _p('post.copyright.editor') + " /   "
+            span.post-copyright-info
+              a=editor
+      else if (page.editor = page.typeset && page.editor !== false && page.typeset !== false)
+        .post-copyright__author
+          span.post-copyright-a= _p('post.copyright.author') + " /   "
+          span.post-copyright-info
+            a(href=authorHref)=author
+        .post-copyright__editor
+          span.post-copyright-a= _p('post.copyright.typeset') + " " + _p('post.copyright.editor') + " /   "
+          span.post-copyright-info
+            a=typeset
+    else if (page.author = page.typeset)
+      .post-copyright__author
+        span.post-copyright-a= _p('post.copyright.author') + " " + _p('post.copyright.typeset') + " /   "
+        span.post-copyright-info
+          a(href=authorHref)=author
+      if page.editor !== false
+        .post-copyright__editor
+          span.post-copyright-a= _p('post.copyright.editor') + " /   "
+          span.post-copyright-info
+            a=editor
+    if page.copyright_info !== false
+      .post-copyright__notice
+        span.post-copyright-c= _p('post.copyright.copyright_notice') + "   "
+        a.icon(rel='noopener' target='_blank' title='Creative Commons' href='https://creativecommons.org/')
+          i.fab.fa-creative-commons
+        span.post-copyright-info= "   "
+        span.post-copyright-info!= info
+else if theme.post_copyright.enable && page.copy_info !== false
+  .post-copyright
+    if page.author !== false
+      .post-copyright__author
+        span.post-copyright-a= _p('post.copyright.author') + " /   "
+        span.post-copyright-info
+          a=author
+    if page.typeset !== false
+      .post-copyright__typeset
+        span.post-copyright-a= _p('post.copyright.typeset') + " /   "
+        span.post-copyright-info
+          a=typeset
+    if page.editor !== false
+      .post-copyright__editor
+        span.post-copyright-a= _p('post.copyright.editor') + " /   "
+        span.post-copyright-info
+          a=editor
+    .post-copyright__type
+      span.post-copyright-z= _p('post.copyright.copy_notice') + "   "
+      span.post-copyright-info!= copy
+    if page.copy_url !== false
+      .post-copyright__l
+        span.post-copyright-k
+          a(href=url_for(url))= _p('post.copyright.link')

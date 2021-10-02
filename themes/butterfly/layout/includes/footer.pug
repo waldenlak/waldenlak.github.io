@@ -1,0 +1,15 @@
+#footer-wrap
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `${theme.footer.owner.since} - ${nowYear} &copy; ${config.title} - ${theme.footer.custom_text}`
+    else
+      .copyright!= `${nowYear} &copy; ${config.title} - ${theme.footer.custom_text}`
+  if theme.footer.copyright
+    .framework-info
+      span.footer-info Crafted with 
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-info -
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+      span.footer-info!= ` by ${config.author}`

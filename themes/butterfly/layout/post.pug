@@ -1,0 +1,36 @@
+extends includes/layout.pug
+
+block content
+  .post-page
+    if top_img === false
+      include includes/header/post-info.pug
+
+    .paper
+      article#article-container.post-content!=page.content
+      include includes/post/post-copyright.pug
+      .tag_share
+        if (theme.post_meta.post.tags)
+          .post-meta__tag-list
+            each item, index in page.tags.data
+              i.iconfont.icon-Paperclip
+              a(href=url_for(item.path)).post-meta__tags #[=item.name]
+        include includes/third-party/share/index.pug
+          
+      if theme.reward.enable
+        !=partial('includes/post/reward', {}, {cache: true})
+
+      if theme.ad && theme.ad.post
+        .ads-wrap!=theme.ad.post
+
+block after
+  .pag-post
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
+
+  .com
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
+      

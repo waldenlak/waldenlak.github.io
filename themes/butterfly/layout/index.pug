@@ -1,0 +1,13 @@
+extends includes/layout.pug
+
+block content
+  if theme.categoryBar.enable
+    .category-item(style='height:auto;width:100%;padding:0px;margin:20px 0 20px;')
+      #categoryBar!= list_categories(site.categories,{class: 'categoryBar',depth: 1})
+
+block after
+  span(style='width:100%;padding:0px;margin:20px 0 20px;') 最新文章
+  include ./includes/mixins/post-ui.pug
+  #recent-posts.recent-posts
+    +postUI
+    include includes/pagination.pug
