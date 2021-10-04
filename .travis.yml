@@ -1,37 +1,40 @@
 language: node_js # 设置语言
-
 node_js: node # 设置相应版本
-
 os: windows # 操作系统
-
 cache:
   apt: true
   directories:
     - node_modules # 缓存不经常更改的内容
-
 # 邮件通知成功或是失败
 notifications:
   email:
     recipients:
       - 2952068332@qq.com
       - 2498274282@qq.com
-    on_success: always # default: change
-    on_failure: always # default: always
+    on_success: always # 默认值 change
+    on_failure: always # 默认值 always
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
   - npm install hexo-cli -g # 安装依赖
-  - chmod +x ./publish-to-master.sh  # 为shell文件添加可执行权限
-
 install:
   - npm install # 安装hexo及插件
-
 script:
-  - hexo clean # 部署命令 清除
+  - hexo clean # 清除
   - hexo g # 生成
-
+#前5句保护部署分支的.git文件夹，用于保留历史部署的commit日志，否则部署分支永远只有一条commit记录
 after_script:
-  - ./publish-to-master.sh # 进入静态文件目录，部署到指定仓库
+  - git clone https://${GH_REF} .deploy_git
+  - cd .deploy_git
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./public/
+  - cd ./public
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Travis CI AutoUpdate `date +"%Y-%m-%d %H:%M"`"
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master #部署Github Pages。Travis_Token是在Travis中配置token的名称
 
 branches:
   only:
@@ -39,4 +42,4 @@ branches:
 
 env:
   global:
-    - GH_REF: github.com/waldenlak/waldenlak.github.io.git #设置环境变量，更改name
+    - GH_REF: github.com/waldenlak/waldenlak.github.io.git #设置Github Pages环境变量，更改name
