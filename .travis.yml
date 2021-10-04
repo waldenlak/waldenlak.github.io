@@ -6,13 +6,13 @@ cache:
   directories:
     - node_modules # 缓存不经常更改的内容
 # 邮件通知成功或是失败
-notifications:
-  email:
-    recipients:
-      - 2952068332@qq.com
-      - 2498274282@qq.com
-    on_success: always # 默认值 change
-    on_failure: always # 默认值 always
+#notifications:
+#  email:
+#    recipients:
+#      - 2952068332@qq.com
+#      - 2498274282@qq.com
+#    on_success: always # 默认值 change
+#    on_failure: always # 默认值 always
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
@@ -23,6 +23,7 @@ script:
   - hexo clean # 清除
   - hexo g # 生成
 #前5句保护部署分支的.git文件夹，用于保留历史部署的commit日志，否则部署分支永远只有一条commit记录
+#变量在Travis中配置Environment Variables
 after_script:
   - git clone https://${GH_REF} .deploy_git
   - cd .deploy_git
@@ -34,12 +35,7 @@ after_script:
   - git config user.email "${U_EMAIL}"
   - git add .
   - git commit -m "Travis CI AutoUpdate `date +"%Y-%m-%d %H:%M"`"
-  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master #部署Github Pages。Travis_Token是在Travis中配置token的名称
-
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master #部署Github Pages
 branches:
   only:
   - hexo # 只监测hexo分支
-
-env:
-  global:
-    - GH_REF: github.com/waldenlak/waldenlak.github.io.git #设置Github Pages环境变量，更改name
