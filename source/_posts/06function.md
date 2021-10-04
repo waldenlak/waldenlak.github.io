@@ -20,9 +20,15 @@ toc_number: true
 
 # 查漏补缺教程合集
 
-⭐[Butterfly 美化/優化/魔改 教程合集](https://butterfly.js.org/posts/7670b080/)
+## 样式美化
+
+⭐来自主题原作者：[Butterfly 美化/優化/魔改 教程合集](https://butterfly.js.org/posts/7670b080/)
 [小康博客-Hexo 安装并使用 Butterfly 主题](https://www.antmoe.com/posts/75a6347a/index.html)
+
+## 环境配置、样式美化、功能增加、网站加速
+
 [过客～励む-Hexo+github 搭建博客 (超级详细版，精细入微)](https://yafine-blog.cn/posts/4ab2.html)
+[史上最全的Hexo博客搭建配置完全指南_云玩家-CSDN博客](https://blog.csdn.net/qq_42579187/article/details/104760516)
 
 [Butterfly主题更新总结 | MuJin's Blog](https://xiabor.com/4215.html)
 [next主题-数据统计、站内搜索、热门文章排行榜、豆瓣阅读 / 电影 / 游戏、在线聊天、行为监测与反馈、文章评分](http://yearito.cn/posts/hexo-advanced-settings.html)
@@ -44,7 +50,78 @@ toc_number: true
 
 [MuJin's Blog-Hexo大结局](https://xiabor.com/714f.html)
 
-## （二）双线部署+自动部署
+## （二）双线部署+自动部署教程
+
+### 镜像备份
+
+[Gitee导入Github仓库并同步更新_theONLY的博客-CSDN博客](https://blog.csdn.net/m0_46157986/article/details/109530672)
+
+[仓库镜像管理 Gitee↔Github双向同步](https://gitee.com/help/articles/4336)
+
+### Travis CI+语雀自动部署
+
+{% tabs c,1 %}
+
+<!-- tab 参考教程 -->
+整体步骤移步
+
+- 配置逻辑：[使用Travis CI自动部署Hexo博客 | IT范儿](http://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/)另一地址：[使用Travis CI自动部署Hexo博客 - 酷小孩 - 博客园](https://www.cnblogs.com/babycool/p/7326722.html)
+- 自定义commit内容：①时间[博客折腾记：使用 Travis CI 自动部署博客 | 算法花园](http://xiang578.com/post/use-travis-ci-to-auto-build-blog.html)②数字，邮件通知[构建指定仓库_使用Travis CI自动构建和部署你的GitBook](https://blog.csdn.net/weixin_42465158/article/details/112720613)
+- 通配变量名：[使用TRAVIS-CI自动部署GITHUB上的项目 - 灰信网](https://www.freesion.com/article/80151075945/)；[利用Travis CI+GitHub实现持续集成和自动部署 - 知乎](https://zhuanlan.zhihu.com/p/85175312)
+- 设置操作系统：[The Travis CI Blog: Windows is Available (Early Release)](https://blog.travis-ci.com/2018-10-11-windows-early-release)
+- 设置语言版本：["nvs add stable" fails on Windows](https://github.com/jasongin/nvs/issues/122#issuecomment-455864030)
+
+可以在[travis的项目页](https://app.travis-ci.com/)点击`Build History`-`Build job`查看执行记录，也可以通过设置邮件通知直达执行记录。
+<!-- endtab -->
+
+<!-- tab Travis CI配置文件 -->
+在网站源码分支根目录下创建`.travis.yml`
+```yml
+language: node_js # 设置语言
+node_js: node # 设置相应版本
+os: windows # 操作系统
+cache:
+  apt: true
+  directories:
+    - node_modules # 缓存不经常更改的内容
+# 邮件通知成功或是失败
+notifications:
+  email:
+    recipients:
+      - 2952068332@qq.com
+      - 2498274282@qq.com
+    on_success: always # 默认值 change
+    on_failure: always # 默认值 always
+
+before_install:
+  - export TZ='Asia/Shanghai' # 更改时区
+  - npm install hexo-cli -g # 安装依赖
+install:
+  - npm install # 安装hexo及插件
+script:
+  - hexo clean # 清除
+  - hexo g # 生成
+#前5句保护部署分支的.git文件夹，用于保留历史部署的commit日志，否则部署分支永远只有一条commit记录
+#变量在Travis中配置Environment Variables
+after_script:
+  - git clone https://${GH_REF} .deploy_git
+  - cd .deploy_git
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./public/
+  - cd ./public
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Travis CI AutoUpdate `date +"%Y-%m-%d %H:%M"`"
+  - git push --force --quiet "https://${Travis_Token}@${GH_REF}" master:master #部署Github Pages
+
+branches:
+  only:
+  - hexo # 只监测hexo分支
+```
+<!-- endtab -->
+{% endtabs %}
 
 ## （三）css、js等源码优化
 
@@ -74,13 +151,10 @@ Butterfly已集成不蒜子，可选侧边栏网站资讯、文章信息处阅�
 {% tabs b,-1 %}
 
 <!-- tab swig代码参考 -->
-
 参考[Hexo 页脚增加网站运行时间统计](https://blog.csdn.net/qq_39720594/article/details/105411030)
-
 <!-- endtab -->
 
 <!-- tab pug代码参考 -->
-
 参考[impressionyang-为主题用pugjs编写的hexo博客添加网站运行时间](https://cloud.tencent.com/developer/article/1687643)来设置。
 
 {% codeblock lang:pug %}
@@ -105,15 +179,11 @@ div
 {% endcodeblock %}
 
 修改`var grt= new Date("08/13/2018 00:00:00");`中的起始时间即可。
-
 <!-- endtab -->
 
 <!-- tab 网站运行天数代码 -->
-
 参考[网站运行天数代码](https://www.cnblogs.com/shenjingwa/p/14465251.html)
-
 <!-- endtab -->
-
 {% endtabs %}
 
 ## 在线聊天
@@ -136,15 +206,19 @@ div
 
 # 三、魔改源码篇
 
-## 函数名的使用
+## 关于代码含义的教程
 
 《一只看不懂函数名含义只会画瓢的小松鼠囤的干货》
 
-JS/JQuery
+JS/JQuery文件
 
 - [你应该会喜欢的5个自定义 Hook-Segmentfault思否](https://segmentfault.com/a/1190000039182220)
 
 - JQuery事件的含义：[JS里addEventListener和on的区别_打杂人-CSDN博客](https://blog.csdn.net/aerchi/article/details/80017942)
+
+styl/Stylus文件
+
+- [Stylus 教程 - 蝴蝶教程](https://www.jc2182.com/stylus/stylus-jiaocheng.html)
 
 ## 多设备显示适配
 
@@ -155,3 +229,9 @@ JS/JQuery
 ## 文章页sidebar侧边栏目录
 
 `addListener`已弃用，参考[javascript - matchMedia().addListener marked as deprecated, addEventListener equivalent? - Stack Overflow](https://stackoverflow.com/questions/56466261/matchmedia-addlistener-marked-as-deprecated-addeventlistener-equivalent)的回答修改。
+
+# 可选插件
+
+网站根目录下的`package.json`内的`dependencies`是所有`npm install * --save`（`*`通配插件名）以及手动写入的插件依赖。
+
+- [GitHub - xbotao/hexo-admin-qiniu: 根据hexo-admin@2.2.0进行修改，添加粘贴图片上传至七牛](https://github.com/xbotao/hexo-admin-qiniu)

@@ -24,6 +24,12 @@ toc_number: false
 Hexo框架+GitHub国外托管+DNSPod解析+Gogs(国内加速)
 步骤参考：[GitHub+Hexo 搭建个人网站详细教程](https://zhuanlan.zhihu.com/p/26625249)
 
+其它搭建方法：
+
+- [一键安装、部署hexo脚本](https://hexoscript.gitbook.io/hexo-script/v/1.3-1/shi-yong-bu-zhou/zhun-bei-gong-ju)
+
+- [U盘便携式hexo 博客搭建 极速纯净低bug主题推荐 部署到coding SEO优化搜索](https://blog.csdn.net/weixin_30596735/article/details/101401039)
+
 # 一、创建个人仓库
 
 ## （一）本地
@@ -79,85 +85,98 @@ Hexo框架+GitHub国外托管+DNSPod解析+Gogs(国内加速)
     `npm config delete https-proxy`
     `git config --global --unset http.proxy`
     `git config --global --unset https.proxy`
+
 2. 设置proxy、https-proxy为null：
     `npm config get proxy`
     `npm config get https-proxy`
-保证两个命令的返回值都为null，继续执行以下两个命令：
+   保证两个命令的返回值都为null，继续执行以下两个命令：
     `npm config set proxy null`
     `npm config set https-proxy null`
+
 3. 设置nodejs文件夹里prefix、cache路径：
     `npm config set prefix "D:\Program Files\nodejs\node\_global"`
     `npm config set cache "D:\Program Files\nodejs\node\_cache"`
+
 4. 检查npm的配置:
     `npm config ls`
-    ```bash
-    ; cli configs
-    metrics-registry = "http://registry.cnpmjs.org/"
-    scope = ""
-    user-agent = "npm/6.14.11 node/v14.16.0 win32 x64"
-
-    ; userconfig C:\Users\username\.npmrc
-    cache = "D:\\Program Files\\nodejs\\node\_cache"
-    disturl = "https://npm.taobao.org/dist"
-    https-proxy = null
-    prefix = "D:\\Program Files\\nodejs\\node\_global"
-    proxy = null
-    registry = "http://registry.cnpmjs.org/"
-    ; builtin config undefined
-    ; node bin location = D:\Program Files\nodejs\node.exe
-    ; cwd = D:\BLOG\username.github.io
-    ; HOME = C:\Users\username
-    ; "npm config ls -l" to show all defaults.
-    ```
+   
+   ```bash
+   ; cli configs
+   metrics-registry = "http://registry.cnpmjs.org/"
+   scope = ""
+   user-agent = "npm/6.14.11 node/v14.16.0 win32 x64"
+   
+   ; userconfig C:\Users\username\.npmrc
+   cache = "D:\\Program Files\\nodejs\\node\_cache"
+   disturl = "https://npm.taobao.org/dist"
+   https-proxy = null
+   prefix = "D:\\Program Files\\nodejs\\node\_global"
+   proxy = null
+   registry = "http://registry.cnpmjs.org/"
+   ; builtin config undefined
+   ; node bin location = D:\Program Files\nodejs\node.exe
+   ; cwd = D:\BLOG\username.github.io
+   ; HOME = C:\Users\username
+   ; "npm config ls -l" to show all defaults.
+   ```
+   
     （缺少了镜像配置electron\_mirror = "https://npm.taobao.org/mirrors/electron/"）
 
 二、以管理员身份启动cmd(管理员：Windows PowerShell ISE)
 
 5. 再次安装cnpm淘宝镜像:
     `npm install -g cnpm --registry=https://registry.npm.taobao.org`
-    ```bash
-    npm : npm WARN deprecated request@2.88.2: request has been deprecated, see http
-    s://github.com/request/request/issues/3142
-    所??在??位?置? 行D:1 字??符??: 1
-    + npm install -g cnpm --registry=https://registry.npm.taobao.org
-    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        + CategoryInfo          : NotSpecified: (npm WARN deprec...est/issues/3142
-      :String) [], RemoteException
-        + FullyQualifiedErrorId : NativeCommandError
-    npm WARN deprecated har-validator@5.1.5: this
-    D:\Program Files\nodejs\node_global\cnpm -> D:\Program Files\nodejs\node_global\
-    node_modules\cnpm\bin\cnpm
-    + cnpm@7.0.0
-    added 709 packages from 969 contributors in 23.465s
-    ```
+   
+   ```bash
+   npm : npm WARN deprecated request@2.88.2: request has been deprecated, see http
+   s://github.com/request/request/issues/3142
+   所??在??位?置? 行D:1 字??符??: 1
+   + npm install -g cnpm --registry=https://registry.npm.taobao.org
+   + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       + CategoryInfo          : NotSpecified: (npm WARN deprec...est/issues/3142
+     :String) [], RemoteException
+       + FullyQualifiedErrorId : NativeCommandError
+   npm WARN deprecated har-validator@5.1.5: this
+   D:\Program Files\nodejs\node_global\cnpm -> D:\Program Files\nodejs\node_global\
+   node_modules\cnpm\bin\cnpm
+   + cnpm@7.0.0
+   added 709 packages from 969 contributors in 23.465s
+   ```
+
 6. 检查 `D:\Program Files\nodejs\node\_global` 确实安装了cnpm
 
 7. 检查淘宝镜像是否安装成功/检查cnpm版本号:
     `cnpm -v`
-    ```bash
-    cnpm@7.0.0 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\lib\parse\_argv.js)
-    npm@6.14.14 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\node\_modules\
-    npm\lib\npm.js)
-    node@14.17.4 (D:\Program Files\nodejs\node.exe)
-    npminstall@5.0.1 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\node\_mod
-    ules\npminstall\lib\index.js)
-    prefix=D:\Program Files\nodejs\node\_global
-    win32 x64 10.0.19042
-    registry=https://registry.nlark.com
+   
+   ```bash
+   cnpm@7.0.0 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\lib\parse\_argv.js)
+   npm@6.14.14 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\node\_modules\
+   npm\lib\npm.js)
+   node@14.17.4 (D:\Program Files\nodejs\node.exe)
+   npminstall@5.0.1 (D:\Program Files\nodejs\node\_global\node\_modules\cnpm\node\_mod
+   ules\npminstall\lib\index.js)
+   prefix=D:\Program Files\nodejs\node\_global
+   win32 x64 10.0.19042
+   registry=https://registry.nlark.com
+   
+   #出现版本号说明安装成功
+   ```
 
-    #出现版本号说明安装成功
-    ```
 8. 检查registry = https://registry.npm.taobao.org：
     `npm config get registry`
-    ```bash
-    http://registry.cnpmjs.org/
-    ```
+   
+   ```bash
+   http://registry.cnpmjs.org/
+   ```
+
 9. 修改npm的资源镜像链接为cnpm：
     `npm config set registry https://registry.npm.taobao.org`
     `npm config get registry`
-    ```bash
-    https://registry.npm.taobao.org/
-    ```
+   
+   ```bash
+   https://registry.npm.taobao.org/
+   ```
+   
     此后所有npm命令替换为cnpm即可。
 
 三、cd进入网站文件夹根目录
@@ -165,6 +184,7 @@ Hexo框架+GitHub国外托管+DNSPod解析+Gogs(国内加速)
 10. 再次安装Hexo:
     `cd BLOG`
     `cnpm install -g hexo-cli`
+    
     ```bash
     Downloading hexo-cli to D:\Program Files\nodejs\node\_global\node\_modules\hexo-cli\_tmp
     Copying D:\Program Files\nodejs\node\_global\node\_modules\hexo-cli\_tmp\\_hexo-cli@
@@ -201,11 +221,14 @@ Hexo框架+GitHub国外托管+DNSPod解析+Gogs(国内加速)
     [hexo-cli@4.3.0] link D:\Program Files\nodejs\node_global\hexo@ -> D:\Program Fi
     les\nodejs\node_global\node_modules\hexo-cli\bin\hexo
     ```
+
 11. 执行 Hexo的两种方式：
     （1）`npx hexo`
     （2）将 Hexo 所在的目录下的 node\_modules 添加到环境变量之中即可直接使用 hexo：
     `echo 'PATH="$PATH:./node\_modules/.bin"' &gt;&gt; ~/.profile`
+
 12. 输入`hexo -v`验证是否安装成功。
+    
     ```bash
     hexo-cli: 4.3.0
     os: win32 10.0.19042
@@ -256,13 +279,17 @@ Hexo框架+GitHub国外托管+DNSPod解析+Gogs(国内加速)
 # 四、[将hexo部署到GitHub](https://sunhwee.com/posts/6e8839eb.html#toc-heading-12)
 
 ## ①GitHub仓库创建master和gh-pages两个分支
+
 在GitHub仓库创建master和gh-pages两个分支(branch)，[gh-pages分支用来存放网站的原始文件(](https://www.zhihu.com/question/21193762/answer/79109280)[站点目录](https://www.zhihu.com/question/21193762/answer/79109280)[)，master分支用来存放生成的静态网页(写作分支)。](https://www.zhihu.com/question/21193762/answer/79109280)(以下Git Bash当前分支应为gh-pages)
 
 ## ②Git部署插件
+
 在D:\BLOG\username.github.io和网站根目录下安装Git部署插件：`npm install hexo-deployer-git --save` 
 
 ## ③修改_config.yml配置
+
 在网站根目录下的[\_config.yml](https://blog.csdn.net/zemprogram/article/details/104288872)修改[部署配置](https://hexo.io/zh-cn/docs/one-command-deployment)：
+
 ```yml
 deploy:
 type: git
@@ -271,9 +298,15 @@ branch: master
 message: [message]
 ```
 
+### 修改_config.yml可能的报错：can not read a block mapping entry; a multiline key may not be an imp licit key
+
+详细参考：[配置_config.yml遇到的error](https://segmentfault.com/q/1010000000746806)
+
+注意`yaml`语法格式，在每个冒号后面都要有个半角空格
+
 ## ④提交站点目录文件
 
-在D:\BLOG\username.github.io(gh-pages)下提交站点目录文件：
+在D:\BLOG\username.github.io(hexo)下提交站点目录文件：
 
 ### 1、方案选择
 
@@ -286,6 +319,7 @@ B、执行脚本（commitscript）：`./c.sh`（[by](https://www.e-learn.cn/qa/q
 ### 2、报错：git push失败
 
 #### ![rejected]
+
 [远端库与本地库不一致，不允许直接推送分支更新的commit](https://blog.csdn.net/index20001/article/details/99764558)：
 A、[强制push](https://cloud.tencent.com/developer/article/1098778)
 
@@ -296,14 +330,17 @@ C、取远程origin仓库的master分支最新版本到origin/master分支上: `
 合并origin/master分支内容到本地master分支：`git merge origin/master`
 
 #### unable to access
+
 [设置ssl](https://blog.csdn.net/sinat_24899403/article/details/114967572)
 
 #### SSL报错
+
 ```bash
 Push failed unable to access ‘\*\*\*.git/‘:
 OpenSSL SSL\_read: Connection was reset, errno 10054
 schannel: failed to receive handshake, SSL/TLS connection failed
 ```
+
 所取用解决办法：
 管理员运行cmd解除ssl验证后，再次git push
 `git config --global http.sslBackend "openssl"`
@@ -313,6 +350,7 @@ fetch origin出错
 `git config --global http.sslCAInfo [path to .pem file]`
 
 ### git pull/fetch报错
+
 [git pull/fetch 警告](https://blog.csdn.net/wq6ylg08/article/details/114106272)的[解决](https://www.it1352.com/2260650.html)
 
 ## （五）设置git管理文件夹
@@ -357,6 +395,7 @@ C、配置代理 [cdn加速](https://blog.csdn.net/u013698807/article/details/10
 [更改HEXO下的theme、url、root配置](https://blog.csdn.net/qq_43641373/article/details/107982229)
 
 ### 仓库页security danger警告
+
 security danger-[github：解决项目依赖的安全隐患](https://blog.csdn.net/baidu_41327283/article/details/106089262)
 
 # 五、创建编辑文章
@@ -418,7 +457,10 @@ B.外部链接/图床（失效则不显示）：大图、次要图
 
 #### Warning: Accessing non-existent property
 
-[警告缺少模块依赖：无伤大雅。](https://www.haoyizebo.com/posts/710984d0/)
+警告缺少模块依赖：不影响网站运行，可忽略。
+
+强迫症党请移步：[解决 Hexo 在使用 Node.js 14 时的 Accessing non-existent property &#39;xxx&#39; of module exports inside circular dependency 问题 - 好一则博](https://www.haoyizebo.com/posts/710984d0/)
+
 ```bash
 (node:32520) Warning: Accessing non-existent property 'lineno' of module exports  inside circular dependency
 (Use `node --trace-warnings ...` to show where the warning was created)
@@ -436,10 +478,12 @@ B.外部链接/图床（失效则不显示）：大图、次要图
 查看 npm 安装各 hexo 插件的情况：（进入网站根目录，管理员执行）`npm ls --depth 0`
 
 ⚪出现missing说明缺少hexo所需的插件：
+
 ```bash
 npm ERR! missing: hexo-deployer-git@2.1.0 required by hexo-site@0.0.0
 npm ERR! missing: hexo-browsersync@^0.3.0 required by hexo-site@0.0.0
 ```
+
 解决办法：重新单独安装缺少的插件即可
 `npm i hexo-deployer-git --save`
 `npm i hexo-browsersync --save`
@@ -448,12 +492,14 @@ npm ERR! missing: hexo-browsersync@^0.3.0 required by hexo-site@0.0.0
 
 ⚪node\_modules目录中已经安装了一个package，但是package.json中并没有对该package做依赖，那么这个package就应该被删除。这时如果执行npm ls命令则指示有一个`package not used`。
 为了清理代码，需要执行`npm prune`
+
 ```bash
 npm WARN package.json kidsit@1.0.0 No repository field.
 npm WARN package.json kidsit@1.0.0 No README data
 npm ERR! extraneous: destroy@1.0.4 D:\STUDY\BLOG\FGH\node\_modules\destroy
 npm ERR! extraneous: wrappy@1.0.2 D:\STUDY\BLOG\FGH\node\_modules\wrappy
 ```
+
 ⚪需要安装 pug 以及 stylus 的渲染器
 `npm install hexo-renderer-pug hexo-renderer-stylus --save`
 
@@ -472,9 +518,12 @@ err: OperationalError:  D:/BLOG/FGH/node_modules/_nib@1.1.2@nib/lib/nib/vendor.s
      278|         filter: none args
   cannot perform '' * 100
 ```
+
 报错指出vendor相关问题。
 解决方案：在主题配置文件找到vendor相关配置，设为false。
 `css\_prefix: false`
+
+#### can not read a block mapping entry; a multiline key may not be an imp licit key
 
 #### npm无法卸载依赖
 
