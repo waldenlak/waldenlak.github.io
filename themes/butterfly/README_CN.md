@@ -1,12 +1,56 @@
 <div align="right">
-  語言:
+  语言:
   中文
   <a title="English" href="/README.md">英文</a>
 </div>
 
-# butterfly
+# hexo-theme-bud
 
-本仓库主题是在原butterfly主题的基础上进行个性化修改的。感谢作者的开发♥
+本仓库主题是在[原butterfly主题](https://github.com/jerryc127/hexo-theme-butterfly)的基础上进行个性化修改的。感谢作者的开发♥
+
+样式预览：[浮光河](www.fgggh.cn)
+
+## 安装
+
+```powershell
+git clone -b master https://github.com/waldenlak/hexo-theme-bud themes/bud
+```
+
+## 使用
+
+在hexo根目录下的`_config.yml`中修改主题为`bud`
+
+```yml
+theme: bud
+```
+
+- 如果没有`pug`以及`stylus`的渲染器，请安装： [hexo-renderer-pug](https://github.com/hexojs/hexo-renderer-pug)或者[hexo-render-pug](https://github.com/maxknee/hexo-render-pug)，以及[hexo-renderer-stylus](https://github.com/hexojs/hexo-renderer-stylus)。
+  
+  ```powershell
+  npm install hexo-renderer-pug hexo-renderer-stylus --save
+  # or
+  yarn add hexo-render-pug hexo-renderer-stylus
+  ```
+
+## 特色
+
+- [x] 首页随机背景图片
+
+- [x] 隐藏侧边栏
+
+- [ ] 首页分类磁贴导航
+
+- [x] 首页文章列表卡片自动调节高度
+
+- [x] 悬停响应式卡片设计
+
+- [x] 引用iconfont图标
+
+- [x] front-matter自定义版权声明的作者、排版、审校者，以及原创或转载
+
+- [x] 文章末美化分享按钮、标签按钮
+
+- [x] 自定义光标、夜间模式、阅读模式的样式
 
 # hexo-theme-butterfly
 
@@ -52,30 +96,30 @@ npm i hexo-theme-butterfly
 theme: butterfly
 ```
 
->如果你沒有pug以及stylus的渲染器，請下載安裝： `npm install hexo-renderer-pug` `hexo-renderer-stylus --save`
+> 如果你沒有pug以及stylus的渲染器，請下載安裝： `npm install hexo-renderer-pug` `hexo-renderer-stylus --save`
 
 ## 🎉 特色
 
 - [x] 卡片化設計
-- [X] 支持二級目錄
+- [x] 支持二級目錄
 - [x] 雙欄設計
 - [x] 響應式主題
 - [x] 夜間模式
 - [x] Pjax
 - [x] 文章閲讀模式
 - [x] 簡體和繁體轉換
-- [X] 電腦和手機都可查看TOC目錄
-- [X] 內置多種代碼配色（darker/pale night/light/ocean/mac/mac light），可自定義代碼配色
-- [X] 代碼塊顯示代碼語言/關閉或展開代碼塊/代碼複製/代碼自動換行
-- [X] 可關閉文字複製/可開啟內容複製增加版權信息）
-- [X] 兩種搜索（Algolia搜索和本地搜索）
+- [x] 電腦和手機都可查看TOC目錄
+- [x] 內置多種代碼配色（darker/pale night/light/ocean/mac/mac light），可自定義代碼配色
+- [x] 代碼塊顯示代碼語言/關閉或展開代碼塊/代碼複製/代碼自動換行
+- [x] 可關閉文字複製/可開啟內容複製增加版權信息）
+- [x] 兩種搜索（Algolia搜索和本地搜索）
 - [x] Mathjax 和 Katex
 - [x] 內置404頁面
 - [x] 顯示字數統計
 - [x] 顯示相關文章
 - [x] 過期文章提醒
 - [x] 多種分享系統（AddThis/Sharejs/Addtoany）
-- [X] 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo）
+- [x] 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo）
 - [x] 支持雙評論部署
 - [x] 多種在線聊天（Chatra/Tidio/Daovoice/Gitter/Crisp）
 - [x] 多種分析系統
