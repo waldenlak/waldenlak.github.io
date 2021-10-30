@@ -20,7 +20,6 @@ a#site-name {font: lighter 160% you!important}
 .page .not-home-page #nav a{color: rgba(41,41,41,.8)}
 .page .not-home-page #nav #search-button{color: #667eea}
 .fa-fw{font-size: 130%;padding-right: .3em}
-i.iconfont.icon-sou.fa-fw{animation: announ_animation 1s linear infinite}
 #nav {font-size: 180%}
 #site_social_icons .social-icon {font-size: 200%}
 /*首页中间标题、副标题，社交图标，正片叠底遮罩*/
@@ -29,7 +28,6 @@ h1#site-title {font: normal 800% you!important}
 span#subtitle {color: #ffffffcc;font-size: 90%;margin-top: 20px}
 #page-header #site_social_icons{margin-top: 60px}
 #page-header:not(.not-top-img):before {background-color: rgba(0,0,0,.05)}
-.page main#content-inner{display: none;}
 /*背景颜色，夜间模式卡片、阴影、引用块、标签、链接、分割线、表格、目录、版权声明、移动端导航栏、标签字体配色，伪类遮罩层透明*/
 #web_bg{background: linear-gradient(to bottom, #fafbfd, #e0eafc)}
 #footer-wrap{background-color: #e4edff}
@@ -85,9 +83,8 @@ button.fas.fa-sign-out-alt.exit-readmode:hover{color:rgba(172, 172, 172, 0.6)}
 /*搜索样式，侧边栏图标、页码按钮图标样式，引用样式，版权声明样式*/
 .card-announcement-animation {color: rgba(65, 68, 65, 0.5)}
 i.fas.fa-folder-open,i.fas.fa-archive {color: #667eeab3}
-#pagination .page-number.current {background: #6e8fe7;border-radius: 2em;color: #fff;display: inline-block;width: 2em;height: 2em;line-height: 2em}
-#pagination .page-number:hover{background: #526ad3a9}
-#pagination .page-number{background: #fff;margin: auto 1em auto 0;display: inline-block;border-radius: .5em;width: 2em;height: 2em;line-height: 2em}
+#pagination .page-number.current,#pagination .page-number.current:hover{background: #6e8fe7;border-radius: 2em;color: #fff;display: inline-block;width: 2em;height: 2em;line-height: 2em}
+a.extend.next,a.extend.prev{padding:2px 0 0 .4em}
 div#rightside button,a#to_comment{background-color: #667eea6e}
 #article-container.post-content ol{font-size: small;}
 span.post-copyright-c,i.fab.fa-creative-commons{color: #ff7171cc}
@@ -139,7 +136,7 @@ button#hide-aside-btn{
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
-.hide-toggle,.read-mode #article-container .hide-toggle{border: 0;margin-bottom: 5em}
+.hide-toggle,.read-mode #article-container .hide-toggle{border: 0;margin: 2.5em 0}
 .hide-toggle .hide-button{background: #eaefff8c;border: 0;border-radius: 1em}
 .hide-toggle > .hide-content{background: #eaefff8c;margin: 0 1em;padding: 30px 24px}
 [data-theme='dark'] .hide-toggle .hide-button,[data-theme='dark'] .hide-toggle > .hide-content{background: #37373a8c;color: #eaefff}
@@ -148,13 +145,7 @@ button#hide-aside-btn{
 mark{background-color: rgba(255, 241, 187, .6)}
 .img-alt.is-center{font-size: 15%}
 .img-alt{color: #00000000}
-/*横竖滚动条高宽及背景
-::-webkit-scrollbar {width: 4px;height: 10px}
-/*滑块 内阴影+圆角
-::-webkit-scrollbar-thumb {background-color: #c066004b;border-radius: 1em;}
-/*滚动条轨道 内阴影+圆角
-::-webkit-scrollbar-track,::-webkit-scrollbar-corner{border-radius: 2em;background-color: #f5f5f500}
-::-moz-selection {color: #ffffff00;background-color: #667eea2d}
+.note:not(.no-icon)::before{top:calc(6% - .5em);right:.8em}
 /*首页文章栏，重要文章尺寸、标题，居中*/
 .recent-post-item.post-card-large{height: 150%}
 #recent-posts > .post-card-large >.recent-post-info > .content{-webkit-line-clamp: 5!important}
@@ -167,7 +158,7 @@ a.article-title {
 /* 全局默认，悬停图片，悬停页码的光标*/
 body,html{cursor: url('https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/BibataModBlue/Arrow.cur'),auto !important;}
 img{cursor: url('https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/BibataMod Light+Sm/Cross.cur'),auto !important;}
-#pagination .page-number:hover{cursor: url('https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/BibataMod Light+Sm/UpArrow.cur'),auto;}
+#pagination .page-number:hover{cursor: url('https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/BibataMod Light+Sm/UpArrow.cur'),auto;color: var(--font-color);}
 /* 悬停外链&链接卡片、站内链接标签时的光标 */
 a:hover,#article-container a.link-card:hover{
     cursor: url('https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/BibataMod Light+Sm/Hand2.cur'),auto;
