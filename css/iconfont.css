@@ -1,5 +1,4 @@
-@font-face {
-  font-family: "iconfont"; /* Project id 2745648 */
+@font-face {  font-family: "iconfont"; /* Project id 2745648 */
   src: url('//at.alicdn.com/t/font_2745648_7qhutjbkeam.woff2?t=1633578129415') format('woff2'),
        url('//at.alicdn.com/t/font_2745648_7qhutjbkeam.woff?t=1633578129415') format('woff'),
        url('//at.alicdn.com/t/font_2745648_7qhutjbkeam.ttf?t=1633578129415') format('truetype');
@@ -38,7 +37,6 @@
 .icon-zi:before {content: "\ebbf";}
 .icon-mov:before {content: "\e615";}
 .icon-tags:before {content: "\e604";}
-.icon-key:before {content: "\e6cb";}
 .icon-fang:before {content: "\e605";}
 .icon-tree:before {content: "\e62b";}
 .icon-fei:before {content: "\e617";}

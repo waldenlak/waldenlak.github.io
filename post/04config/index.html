@@ -1,34 +1,38 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>建站04-hexo、butterfly文件夹结构 | 浮光河</title><meta name="keywords" content="hexo,butterfly"><meta name="author" content="惊蛰 子诺,2952068332@qq.com"><meta name="copyright" content="惊蛰 子诺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="hexo站点文件夹  文件夹结构 站点配置 页面模板Front-matter配置   butterfly主题文件夹  文件夹结构 主题配置  参考教程 网站功能 展示信息   正文样式 技术优化">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>建站04-hexo源码文件看不懂？ | 浮光河</title><meta name="keywords" content="hexo,butterfly"><meta name="author" content="惊蛰 子诺,2952068332@qq.com"><meta name="copyright" content="惊蛰 子诺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="fff"><meta name="referrer" content="no-referrer"><meta name="description" content="hexo站点源码文件夹  文件夹结构 站点配置 页面模板Front-matter配置   butterfly主题源码文件夹  文件夹结构 主题配置  参考教程 网站功能 展示信息   正文样式 技术优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站04-hexo、butterfly文件夹结构">
+<meta property="og:title" content="建站04-hexo源码文件看不懂？">
 <meta property="og:url" content="https://fgggh.cn/post/04config/index.html">
 <meta property="og:site_name" content="浮光河">
-<meta property="og:description" content="hexo站点文件夹  文件夹结构 站点配置 页面模板Front-matter配置   butterfly主题文件夹  文件夹结构 主题配置  参考教程 网站功能 展示信息   正文样式 技术优化">
+<meta property="og:description" content="hexo站点源码文件夹  文件夹结构 站点配置 页面模板Front-matter配置   butterfly主题源码文件夹  文件夹结构 主题配置  参考教程 网站功能 展示信息   正文样式 技术优化">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg">
 <meta property="article:published_time" content="2021-08-31T04:52:42.000Z">
-<meta property="article:modified_time" content="2021-10-24T07:35:44.873Z">
+<meta property="article:modified_time" content="2022-07-31T08:45:36.596Z">
 <meta property="article:author" content="惊蛰 子诺">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="butterfly">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://fgggh.cn/post/04config/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg"><link rel="shortcut icon" href="/img/lo.svg"><link rel="canonical" href="https://fgggh.cn/post/04config/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?d39f61f5e8383a45bb1dc9865e20f3a4";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><script>const GLOBAL_CONFIG = { 
+</script><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" onload="this.media='all'" /></noscript>
+<link type="text/css" rel="preload stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" crossorigin ><link rel="stylesheet" href="http://cdn.repository.webfont.com/webfonts/nomal/146144/46888/62fef4a0f629d80380493ca0.css" type="text/css" display="swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到你查询的内容：${query}"}},
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"search.local_search.hits_empty"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
   highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
@@ -45,24 +49,23 @@
   },
   copyright: undefined,
   lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为夜间模式","night_to_day":"你已切换为日间模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-right"},
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为夜间模式","night_to_day":"你已切换为日间模式","bgLight":"#ff7242","bgDark":"#ff7242","position":"top-center"},
   source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
     justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+      js: 'https://unpkg.com/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://unpkg.com/flickr-justified-gallery/dist/fjGallery.css'
     }
   },
   isPhotoFigcaption: false,
   islazyload: false,
-  isanchor: false
+  isAnchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '建站04-hexo、butterfly文件夹结构',
+  title: '建站04-hexo源码文件看不懂？',
   isPost: true,
   isHome: false,
-  isHighlightShrink: true,
+  isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-10-24 15:35:44'
+  postUpdate: '2022-07-31 16:45:36'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -128,13 +131,32 @@
       win.activateLightMode = function () {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'fff')
         }
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -145,26 +167,21 @@
         }
       }
     
-    const fontSizeVal = saveToLocal.get('global-font-size')
-    if (fontSizeVal !== undefined) {
-      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
-    }
-    
     const detectApple = () => {
-      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
         document.documentElement.classList.add('apple')
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/design.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/waldenlak/plugins/budColor.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/waldenlak/plugins/bar.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><div class="menus_items"><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 小书屋</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shelf"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yin"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/vedio/"><i class="fa-fw iconfont icon-dy"></i><span> 影剧</span></a></li><li><a class="site-page child" href="/perform/"><i class="fa-fw iconfont icon-piao"></i><span> 演出</span></a></li><li><a class="site-page child" href="/exhibit/"><i class="fa-fw iconfont icon-xhi"></i><span> 展览</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/mdcloud/"><span> 云写作</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浮光河</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="iconfont icon-sou fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 小书屋</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw iconfont icon-shelf"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yin"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/vedio/"><i class="fa-fw iconfont icon-dy"></i><span> 影剧</span></a></li><li><a class="site-page child" href="/perform/"><i class="fa-fw iconfont icon-piao"></i><span> 演出</span></a></li><li><a class="site-page child" href="/exhibit/"><i class="fa-fw iconfont icon-xhi"></i><span> 展览</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/mdcloud/"><span> 云写作</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="post-page"><div id="post-info"><h1 class="post-title">建站04-hexo、butterfly文件夹结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="iconfont icon-rili post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-31T04:52:42.000Z" title="发表于 2021-08-31 12:52:42">2021-08-31</time><span class="post-meta-separator"> </span><i class="iconfont icon-new post-meta-icon"></i><span class="post-meta-label">编辑于</span><time class="post-meta-date-updated" datetime="2021-10-24T07:35:44.873Z" title="编辑于 2021-10-24 15:35:44">2021-10-24</time></span><span class="post-meta-categories"><span class="post-meta-separator"> </span><a class="post-meta-categories" href="/categories/%E7%90%86%E5%B7%A5/">理工</a><i class="iconfont icon-qie post-meta-separator"></i><a class="post-meta-categories" href="/categories/%E7%90%86%E5%B7%A5/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator"> </span><span class="post-meta-wordcount"><i class="iconfont icon-zi post-meta-icon"></i><span class="post-meta-label">字数 </span><span class="word-count">2.4k</span><span class="post-meta-separator"> </span><i class="iconfont icon-cost post-meta-icon"></i><span class="post-meta-label">阅读时长 </span><span>8分钟</span></span><span class="post-meta-separator"> </span><span class="post-meta-pv-cv" id="" data-flag-title="建站04-hexo、butterfly文件夹结构"><i class="iconfont icon-k post-meta-icon"></i><span class="post-meta-label">阅读 </span><span id="busuanzi_value_page_pv"></span><span class="post-meta-label">次</span></span></div></div></div><div class="paper"><article class="post-content" id="article-container"><p><ul class="markdownIt-TOC">
-<li><a href="#hexo%E7%AB%99%E7%82%B9%E6%96%87%E4%BB%B6%E5%A4%B9">hexo站点文件夹</a>
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"><link rel="stylesheet" href="/css/design.css"  media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg" onerror="onerror=null;src='/img/mo.gif'" alt="avatar"/></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/mdcloud/"><span> 云端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw ri-pantone-fill"></i><span> 书</span></a></li><li><a class="site-page child" href="/vedio/"><i class="fa-fw ri-movie-2-fill"></i><span> 影</span></a></li><li><a class="site-page child" href="/exhibit/"><i class="fa-fw ri-coupon-3-fill"></i><span> 展</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 案台</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><span> 时间轴</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="site-name"><a href="/">浮光河</a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/mdcloud/"><span> 云端</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 藏宝图</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw ri-pantone-fill"></i><span> 书</span></a></li><li><a class="site-page child" href="/vedio/"><i class="fa-fw ri-movie-2-fill"></i><span> 影</span></a></li><li><a class="site-page child" href="/exhibit/"><i class="fa-fw ri-coupon-3-fill"></i><span> 展</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 案台</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><span> 时间轴</span></a></li></ul></div></div><button id="search"><a class="site-page social-icon search"><i class="ri-search-2-line"></i></a></button></div><div id="nav-r"><div id="menuo"><button id="darkmode" type="button" title="日间和夜间模式转换"><i class="ri-moon-fill"></i></button></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="post-page"><div id="post-info"><h1 class="post-title">建站04-hexo源码文件看不懂？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="ri-calendar-event-fill post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-31T04:52:42.000Z" title="发表于 2021-08-31 12:52:42">2021-08-31</time><span class="post-meta-separator"> </span><i class="ri-refresh-line post-meta-icon"></i><span class="post-meta-label">编辑于</span><time class="post-meta-date-updated" datetime="2022-07-31T08:45:36.596Z" title="编辑于 2022-07-31 16:45:36">2022-07-31</time></span><span class="post-meta-categories"><span class="post-meta-separator"> </span><a class="post-meta-categories" href="/categories/%E7%90%86%E5%B7%A5/">理工</a><i class="ri-arrow-right-s-line post-meta-separator"></i><a class="post-meta-categories" href="/categories/%E7%90%86%E5%B7%A5/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-wordcount"><i class="ri-file-list-3-line post-meta-icon"></i><span class="post-meta-label">字数 </span><span class="word-count">2.4k</span><span class="post-meta-separator"> </span><i class="ri-timer-line post-meta-icon"></i><span class="post-meta-label">阅读时长 </span><span>8分钟</span></span><span class="post-meta-separator"> </span><span class="post-meta-pv-cv" id="" data-flag-title="建站04-hexo源码文件看不懂？"><i class="ri-fire-fill post-meta-icon"></i><span class="post-meta-label">阅读 </span><span id="busuanzi_value_page_pv"></span><span class="post-meta-label">次</span></span></div></div></div><div class="paper"><article class="post-content" id="article-container"><p><ul class="markdownIt-TOC">
+<li><a href="#hexo%E7%AB%99%E7%82%B9%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6%E5%A4%B9">hexo站点源码文件夹</a>
 <ul>
 <li><a href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84">文件夹结构</a></li>
 <li><a href="#%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE">站点配置</a></li>
 <li><a href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BFfront-matter%E9%85%8D%E7%BD%AE">页面模板Front-matter配置</a></li>
 </ul>
 </li>
-<li><a href="#butterfly%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E5%A4%B9">butterfly主题文件夹</a>
+<li><a href="#butterfly%E4%B8%BB%E9%A2%98%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6%E5%A4%B9">butterfly主题源码文件夹</a>
 <ul>
 <li><a href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84-2">文件夹结构</a></li>
 <li><a href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE">主题配置</a>
@@ -181,7 +198,7 @@
 </ul>
 </p>
 <span id="more"></span>
-<h2 id="hexo站点文件夹"><a class="markdownIt-Anchor" href="#hexo站点文件夹"></a> hexo站点文件夹</h2>
+<h2 id="hexo站点源码文件夹"><a class="markdownIt-Anchor" href="#hexo站点源码文件夹"></a> hexo站点源码文件夹</h2>
 <h3 id="文件夹结构"><a class="markdownIt-Anchor" href="#文件夹结构"></a> 文件夹结构</h3>
 <p><code>.github</code><br>
 <code>node_modules</code>：安装的插件依赖的文件夹。存放node相关模块，通常不需关心。<br>
@@ -198,38 +215,34 @@
 <code>.gitignore</code>：配置部署时忽略的文件（夹）<br>
 <code>package.json</code>：记录所用插件的版本，通常不需关心。</p>
 <h3 id="站点配置"><a class="markdownIt-Anchor" href="#站点配置"></a> 站点配置</h3>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>根目录下的_config.yml的代码</span></div>
-    <div class="hide-content"><p>自定义：</p>
+<details class="toggle" ><summary class="toggle-button" style="">根目录下的_config.yml的代码</summary><div class="toggle-content"><p>自定义：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Site 网站的个性化描述</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">浮光河</span> <span class="comment">## 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;雕刻我的构想，展览你的描绘&#x27;</span> <span class="comment">## 网站副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Gardez-le chaud,continuez&#x27;</span> <span class="comment">## 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment">## 网站关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">惊蛰</span> <span class="string">子诺</span> <span class="comment">## 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment">## 网站使用的语言，默认 en</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="comment">## 网站使用的时区，默认 计算机的预设置 ，可不填</span></span><br></pre></td></tr></table></figure>
 <p>改动少：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## URL 文章 URL的设置 Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://fgggh.cn</span> <span class="comment">## 网站的网址</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span> <span class="comment">## 网站的根目录/存放文章的目录</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">post/:title/</span> <span class="comment">## 文章的链接格式，默认 :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span> <span class="comment">## 永久链接中每个段的默认值</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line"><span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment">## Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line"><span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment">## Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Directory 文件夹的设置</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span> <span class="comment">## 资源文件夹 ，存放用户的资源文件，默认 source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span> <span class="comment">## 公用文件夹 ，存放生成的静态文件，默认 public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span> <span class="comment">## 标签目录 ，默认 tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span> <span class="comment">## 档案目录 ，默认 archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span> <span class="comment">## 分类目录 ，默认 categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span> <span class="comment">## 代码目录 ，默认 downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span> <span class="comment">## i18n 目录 ，默认 lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="comment">## 储存站长验证文件，跳过指定文件的渲染</span></span><br></pre></td></tr></table></figure>
 <p>按需调整：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Writing写作设置</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment">## 文章的文件名格式 File name of new posts，默认 title.md</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span>  <span class="comment">## 预设的布局模板，默认 post   </span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment">## 标题是否使用首字母大写 Transform title into titlecase，默认 false</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="comment">## 链接是否在新标签页中打开，默认 true    </span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">## 在新标签页打开外部链接 Open external links in new tab</span></span><br><span class="line">    <span class="attr">field:</span> <span class="string">site</span> <span class="comment">## Apply to the whole site</span></span><br><span class="line">    <span class="attr">exclude:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span> <span class="comment">## 将文件名转换为 1 小写 或 2 大写，默认 0</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span> <span class="comment">## 是否显示渲染草稿，默认 false</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span> <span class="comment">## 是否启用 Asset 文件夹，默认 false</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span> <span class="comment">## 是否建立相对于根文件夹的链接，默认 false</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span> <span class="comment">## 是否显示未来文章，默认 true</span></span><br><span class="line"><span class="attr">highlight:</span> <span class="comment">## 代码块设置</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">## 是否使用代码高亮 ，默认 true</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span> <span class="comment">## 是否显示行号 ，默认 true</span></span><br><span class="line">    <span class="attr">auto_detect:</span> <span class="literal">false</span> <span class="comment">## 是否自动检测语言 ，默认 false</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">## tab 替代设置</span></span><br><span class="line">    <span class="attr">wrap:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">hljs:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">tab_replace:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Home page setting首页设置</span></span><br><span class="line"><span class="comment">#path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line"><span class="comment">#per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment">#order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">&#x27;&#x27;</span> <span class="comment">## 首页的根目录路径（默认 &#x27;&#x27;）</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">12</span> <span class="comment">## 每页显示文章的数量，默认 10（0=首页不分页）</span></span><br><span class="line"><span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">## 显示文章的顺序，默认 -date（日期降序新到旧）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Category &amp; Tag分类和标签的配置</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span> <span class="comment">## 预设分类，默认 uncategorized</span></span><br><span class="line"><span class="attr">category_map:</span> <span class="comment">## 分类别名</span></span><br><span class="line"><span class="attr">tag_map:</span>   <span class="comment">## 标签别名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Metadata elements</span></span><br><span class="line"><span class="comment">### https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta</span></span><br><span class="line"><span class="attr">meta_generator:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Date / Time format时间和日期的显示格式</span></span><br><span class="line"><span class="comment">### Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">### You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">### http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span>   <span class="comment">## 日期格式，默认 YYYY-MM-DD</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="string">HH:mm:ss</span>   <span class="comment">## 时间格式，默认 HH:mm:ss</span></span><br><span class="line"><span class="comment">### updated_option supports &#x27;mtime&#x27;, &#x27;date&#x27;, &#x27;empty&#x27;</span></span><br><span class="line"><span class="attr">updated_option:</span> <span class="string">&#x27;mtime&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Pagination分页设置</span></span><br><span class="line"><span class="comment">### Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">12</span> <span class="comment">## 单个页面上显示的文章数量，默认 10， 0 表示禁用分页</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span> <span class="comment">## 分页目录，默认 page</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Include / Exclude file(s)</span></span><br><span class="line"><span class="comment">### include:/exclude: options only apply to the &#x27;source/&#x27; folder</span></span><br><span class="line"><span class="attr">include:</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="attr">ignore:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Extensions主题类型和插件</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br><span class="line"><span class="comment">## https://github.com/viko16/hexo-permalink-pinyin</span></span><br><span class="line"><span class="attr">permalink_pinyin:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">separator:</span> <span class="string">&#x27;-&#x27;</span> <span class="comment">## default: &#x27;-&#x27;</span></span><br><span class="line"><span class="attr">exclude:</span> <span class="string">/ignore_post/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字数统计阅读时长插件https://github.com/willin/hexo-wordcount</span></span><br><span class="line"><span class="attr">wordCount:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span> </span><br><span class="line"><span class="attr">postWordCount:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">totalCount:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Deployment网站部署配置</span></span><br><span class="line"><span class="comment">### Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span> <span class="comment">## 部署类型</span></span><br><span class="line"><span class="attr">repository:</span> <span class="comment">## 部署仓库地址</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:username/username.github.io.git</span></span><br><span class="line">    <span class="attr">coding:</span> <span class="string">git@e.coding.net:name/name/name.coding.me.git</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span> <span class="comment">## 存储分支</span></span><br><span class="line"><span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">message:</span> <span class="comment">## 自定义提交消息，默认 Site updated: &#123;&#123; now(&#x27;YYYY-MM-DD HH:mm:ss&#x27;) &#125;&#125;</span></span><br></pre></td></tr></table></figure>
-</div></div>
+</div></details>
 <h3 id="页面模板front-matter配置"><a class="markdownIt-Anchor" href="#页面模板front-matter配置"></a> 页面模板Front-matter配置</h3>
 <p>Front-matter可选参数：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38157825/article/details/112782828">Butterfly主题安装文档(一)之快速开始</a></p>
-<p>注意字符格式：变量名+英文冒号+<strong>空格</strong>+配置参数</p>
+<p>❗注意字符格式：变量名+英文冒号+<strong>空格</strong>+配置参数<br>
+错漏会导致页面渲染错误。</p>
 <hr>
-<h2 id="butterfly主题文件夹"><a class="markdownIt-Anchor" href="#butterfly主题文件夹"></a> butterfly主题文件夹</h2>
+<h2 id="butterfly主题源码文件夹"><a class="markdownIt-Anchor" href="#butterfly主题源码文件夹"></a> butterfly主题源码文件夹</h2>
 <h3 id="文件夹结构-2"><a class="markdownIt-Anchor" href="#文件夹结构-2"></a> 文件夹结构</h3>
 <dl>
-<dt>_config.yml</dt>
+<dt><code>_config.yml</code></dt>
 <dd>主题配置文件修改时会自动更新，无需重启<code>hexo server</code>。</dd>
 </dl>
-<p>languages</p>
+<p><code>languages</code></p>
 <dl>
-<dt>layout</dt>
-<dd>布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建<a target="_blank" rel="noopener" href="https://github.com/node-swig/swig-templates">Swig</a> 模板引擎，可以另外安装插件来获得 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-ejs">EJS</a>、<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-haml">Haml</a>、<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-jade">Jade</a> 或 <a target="_blank" rel="noopener" href="https://github.com/maxknee/hexo-render-pug">Pug</a> 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎。参考 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/templates">模板</a> 以获得更多信息。</dd>
-<dt>scripts</dt>
-<dd>脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，请参见 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/plugins">插件</a> 以获得更多信息。</dd>
-<dt>source</dt>
-<dd>资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。</dd>
+<dt><code>layout</code></dt>
+<dd>内容布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建<a target="_blank" rel="noopener" href="https://github.com/node-swig/swig-templates">Swig</a> 模板引擎，可以另外安装插件来获得 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-ejs">EJS</a>、<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-haml">Haml</a>、<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-jade">Jade</a> 或 <a target="_blank" rel="noopener" href="https://github.com/maxknee/hexo-render-pug">Pug</a> 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎。参考 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/templates">hexo模板</a> 以获得更多信息。</dd>
+<dt><code>scripts</code></dt>
+<dd>脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，请参见 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/plugins">hexo插件</a> 以获得更多信息。</dd>
+<dt><code>source</code></dt>
+<dd>资源文件夹，除了模板以外的 Asset，例如 CSS（配置样式）、JavaScript（配置功能）、图片文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。</dd>
 </dl>
 <p>如果文件可以被渲染的话，会经过解析然后储存到 public 文件夹，否则会直接拷贝到 public 文件夹。</p>
-<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>发布主题</span></div>
-    <div class="hide-content"><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/themes">发布主题</a><br>
-进行<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-unit-test">主题单元测试</a>，确保每一项功能都能正常使用。</p>
-</div></div>
 <h3 id="主题配置"><a class="markdownIt-Anchor" href="#主题配置"></a> 主题配置</h3>
 <h4 id="参考教程"><a class="markdownIt-Anchor" href="#参考教程"></a> 参考教程</h4>
 <ul>
@@ -247,7 +260,7 @@
 <p>2、右下角按钮</p>
 <ul>
 <li>距离底部<code>rightside-bottom</code></li>
-<li>更改字体大小<code>change_font_size</code>；简繁转换<code>translate</code>；阅读模式<code>readmode</code>；黑夜模式<code>darkmode</code>；</li>
+<li><s>更改字体大小<code>change_font_size</code></s>；简繁转换<code>translate</code>；阅读模式<code>readmode</code>；黑夜模式<code>darkmode</code>；</li>
 <li>在线聊天<code>chat_btn</code>；</li>
 </ul>
 <h4 id="展示信息"><a class="markdownIt-Anchor" href="#展示信息"></a> 展示信息</h4>
@@ -255,7 +268,7 @@
 <ul>
 <li>网站图标<code>favicon</code></li>
 <li>头像<code>avatar</code>：<code>effect</code>头像转圈</li>
-<li>社交图标<code>social</code>：内置支持font-awesome v4和<a target="_blank" rel="noopener" href="https://fontawesome.com/v5.15/icons">font-awesome v5</a></li>
+<li>社交图标<code>social</code>：内置支持font-awesome <s>v4和<a target="_blank" rel="noopener" href="https://fontawesome.com/v5.15/icons">font-awesome v5</a></s></li>
 </ul>
 <p>2、动效</p>
 <ul>
@@ -268,9 +281,11 @@
 <p>3、图文排版</p>
 <ul>
 <li>首页副标题<code>subtitle</code>：打字效果<code>effect</code>；循环打字<code>loop</code>；调用源<code>source</code>；自定义内容<code>sub</code>；</li>
-<li>主页文章封面<code>cover</code>；</li>
+<li>主页文章封面<code>cover</code>；主页概要/文章节选<code>index_post_content</code></li>
 <li>替換失效图<code>error_img</code>；</li>
 <li>网页字体<code>font</code>、<code>blog_title_font</code></li>
+<li>中英文之间加个空格<code>pangu</code>；</li>
+<li>文章置顶；隐藏；</li>
 </ul>
 <p>4、整体设计</p>
 <ul>
@@ -280,29 +295,22 @@
 <li>页脚背景<code>footer_bg</code>；</li>
 <li>网站默认显示模式<code>display_mode</code></li>
 <li>分类页UI<code>category_ui</code>；标签页UI：<code>tag_ui</code>；</li>
-<li>特效：星空粒子<code>canvas_nest</code>/彩带；打字<code>activate_power_mode</code>-冒光<code>colorful</code>/抖动<code>shake</code>；鼠标点击-烟火<code>fireworks</code>/爱心<code>click_heart</code>/文字<code>ClickShowText</code></li>
+<li>特效：背景-星空粒子<code>canvas_nest</code>/彩带；打字<code>activate_power_mode</code>-冒光<code>colorful</code>/抖动<code>shake</code>；鼠标点击-烟火<code>fireworks</code>/爱心<code>click_heart</code>/文字<code>ClickShowText</code></li>
 </ul>
-<p>5、内容设计</p>
-<ul>
-<li>文章置顶；隐藏；</li>
-<li>中英文之间加个空格<code>pangu</code>；</li>
-</ul>
-<p>6、文章相关信息<code>post_meta</code></p>
+<p>5、文章相关信息<code>post_meta</code></p>
 <ul>
 <li>文章页：创建/更新日期<code>date_type</code> <code>date_format</code>；分类<code>categories</code>；字数统计<code>wordcount</code>；</li>
 <li>主页：创建/更新日期<code>date_type</code> <code>date_format</code>；分类<code>categories</code>；</li>
 </ul>
-<p>主页概要/文章节选<code>index_post_content</code></p>
-<p>7、侧边栏<code>aside</code></p>
+<p>6、侧边栏<code>aside</code></p>
 <ul>
 <li>文章页：目录<code>toc</code>；*相关文章<code>related_post</code>；</li>
 <li>主页：作者栏<code>card_author</code>；公告栏<code>card_announcement</code>；最新文章<code>card_recent_post</code>；标签<code>card_tags</code>；分类<code>card_archives</code>；最新评论<code>newest_comments</code>；</li>
 <li>自定义顺序、栏目内容；</li>
-<li>网页资讯<code>card_webinfo</code></li>
-<li>卜算子统计<code>busuanzi</code>：访问人数；网页运行时间<code>runtimeshow</code>；</li>
+<li>网站数据<code>card_webinfo</code>：卜算子统计<code>busuanzi</code>：访问人数；网页运行时间<code>runtimeshow</code>；</li>
 <li>最新评论<code>newest_comments</code>；</li>
 </ul>
-<p>8、页脚<code>footer</code></p>
+<p>7、页脚<code>footer</code></p>
 <ul>
 <li>版权<code>copyright</code>；备案ICP；页脚自定义文字<code>custom_text</code></li>
 <li>*运行时间<code>runtimeshow</code></li>
@@ -316,7 +324,7 @@
 <li>加图标美化<code>beautify</code>；</li>
 <li>分割线图标<code>hr_icon</code>；</li>
 <li>文章锚点<code>anchor</code>；</li>
-<li>标签外挂：便利贴<code>Note</code>；<br><code>Button</code>点击按钮；<code>tag-hide</code>方法123；<code>Tabs</code>置顶123；；<code>label</code>圆角高亮；</li>
+<li>标签外挂：标签页小窗<code>Tabs</code>；收起内容条<code>hideToggle</code>；相册、多图<code>gallery</code>；</li>
 </ul>
 <p>图片相关</p>
 <ul>
@@ -338,7 +346,7 @@
 <ul>
 <li>文章版权<code>post_copyright</code>；作者；</li>
 <li>打赏<code>reward</code>；</li>
-<li>标签<code>tags</code>；分享<code>Share</code>；相关文章；前后篇<code>post_pagination</code>；</li>
+<li>标签<code>tags</code>；分享<code>Share</code>；相关文章；前后篇<code>post_pagination</code></li>
 </ul>
 <p>3、文后</p>
 <p><a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/ceeb73f/">评论</a><code>comments</code><br>
@@ -360,37 +368,52 @@
 <li>SEO优化/网站验证<code>site_verification</code></li>
 <li>分享缩略图标题等信息<code>Open_Graph_meta</code></li>
 </ul>
-</article><div class="post-end"><span class="post-end-i">—— 待续 ——</span></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-a">作者 排版 /   </span><span class="post-copyright-info"><a href="2952068332@qq.com">惊蛰</a></span></div><div class="post-copyright__notice"><span class="post-copyright-c">原创   </span><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><span class="post-copyright-info">   </span><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处：<a href="https://fgggh.cn/post/04config/" target="_blank">浮光河</a></span></div></div><div class="tag_share"><div class="post-meta__tag-list"><i class="iconfont icon-clip"></i><a class="post-meta__tags" href="/tags/hexo/">hexo</a><i class="iconfont icon-clip"></i><a class="post-meta__tags" href="/tags/butterfly/">butterfly</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg" data-sites="weibo,wechat,douban,qq,twitter,linkedin,facebook"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/js/social-share.min.js" defer></script></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E7%AB%99%E7%82%B9%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text"> hexo站点文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84"><span class="toc-text"> 文件夹结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text"> 站点配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BFfront-matter%E9%85%8D%E7%BD%AE"><span class="toc-text"> 页面模板Front-matter配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#butterfly%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text"> butterfly主题文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84-2"><span class="toc-text"> 文件夹结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text"> 主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="toc-text"> 参考教程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD"><span class="toc-text"> 网站功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-text"> 展示信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%96%87%E6%A0%B7%E5%BC%8F"><span class="toc-text"> 正文样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96"><span class="toc-text"> 技术优化</span></a></li></ol></li></ol></div></div></div></div><div class="wid" id="aside-content"><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%BA%E6%96%87/"><span class="card-category-list-name">人文</span><span class="card-category-list-count">6</span></a></li>
-            </ul></div></div></div></main><main class="after" id="after-inner"><div class="pag-post"><nav class="pag-post" id="pagination"><div class="prev-post pull-left"><a href="/post/a/Paronyms/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">同源字合集</div></div></a></div><div class="next-post pull-right"><a href="/post/05css&amp;js/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">建站05-本站自定义样式美化记录</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="iconfont icon-key fa-fw"></i><span>相关内容</span></div><div class="relatedPosts-list"><div><a href="/post/05css&js/" title="建站05-本站自定义样式美化记录"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-31</div><div class="title">建站05-本站自定义样式美化记录</div></div></a></div><div><a href="/post/07design/" title="建站07-butterfly主题样式魔改记录"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t4.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-31</div><div class="title">建站07-butterfly主题样式魔改记录</div></div></a></div><div><a href="/post/06function/" title="建站06-添加功能"><img class="cover" src="https://www.xinruiyun.cn/ms-mcms/upload/1/editor/1580979167449.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-31</div><div class="title">建站06-添加功能</div></div></a></div><div><a href="/post/03git&npm&hexo/" title="建站03-执行代码-git\npm\hexo常用执行命令"><img class="cover" src="https://gitforwindows.org/img/details_features.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-23</div><div class="title">建站03-执行代码-git\npm\hexo常用执行命令</div></div></a></div><div><a href="/post/02steps/" title="建站02-详细步骤"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-23</div><div class="title">建站02-详细步骤</div></div></a></div><div><a href="/post/a/bug-fix/" title="报错与解决方案合集"><img class="cover" src="https://hbimg.huabanimg.com/a0d8737efc4bff48bc5fd174ba71765f455d3da41b027-kx35qc_fw658/format/webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-06</div><div class="title">报错与解决方案合集</div></div></a></div></div></div></div><div class="com"><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div></main><footer id="footer" style="background: #e4edff"><div id="footer-wrap"><div class="copyright">2021 &copy; 浮光河 - 雕刻我的构想，展览你的描绘</div><div class="framework-info"><span class="footer-info">Crafted with </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-info">-</span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-info"> by 惊蛰 子诺</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本站搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入关键词查找内容" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
-  function initValine () {
-    const valine = new Valine(Object.assign({
-      el: '#vcomment',
-      appId: '',
-      appKey: '',
-      avatar: 'monsterid',
-      serverURLs: '',
-      emojiMaps: "",
-      path: window.location.pathname,
-      visitor: false
+</article><div class="post-end"><span class="p">—— 待续 ——</span></div><div class="co"><div class="co-author"><span class="co-i">作者 排版 /   </span><a class="co-c" href="2952068332@qq.com">惊蛰</a></div><div class="co-notice"><span class="co-c">原创   <a class="co-c" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></span><span class="co-info">   </span><span class="co-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处：<a href="https://fgggh.cn/post/04config/" target="_blank">浮光河</a></span></div></div><div class="tag_share"><div class="tags"><div class="tag"><span class="tagi">#</span><a href="/tags/hexo/">hexo</a><span class="tagn">7</span></div><div class="tag"><span class="tagi">#</span><a href="/tags/butterfly/">butterfly</a><span class="tagn">4</span></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t1.jpg" data-sites="weibo,wechat,douban,qq,twitter,linkedin,facebook"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/waldenlak/plugins/share.js/dist/js/social-share.min.js" defer></script></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="ri-shuffle-fill"><span>目录</span></i><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E7%AB%99%E7%82%B9%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text"> hexo站点源码文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84"><span class="toc-text"> 文件夹结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text"> 站点配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BFfront-matter%E9%85%8D%E7%BD%AE"><span class="toc-text"> 页面模板Front-matter配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#butterfly%E4%B8%BB%E9%A2%98%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text"> butterfly主题源码文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84-2"><span class="toc-text"> 文件夹结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text"> 主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="toc-text"> 参考教程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD"><span class="toc-text"> 网站功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-text"> 展示信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%96%87%E6%A0%B7%E5%BC%8F"><span class="toc-text"> 正文样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8C%96"><span class="toc-text"> 技术优化</span></a></li></ol></li></ol></div></div></div></div><div class="wid" id="aside-content"><div class="sticky_layout"></div></div></main><main class="after" id="after-inner"><div class="pag-post"><nav class="pag-post" id="pagination"><div class="prev-post pull-left"><a href="/post/03git&amp;npm&amp;hexo/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">建站03-执行代码-git\npm\hexo常用执行命令</div></div></a></div><div class="next-post pull-right"><a href="/post/05css&amp;js/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">建站05-外加css/js样式记录</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="ri-magic-fill"></i><span>相关内容</span></div><div class="relatedPosts-list"><div><a href="/post/05css&js/" title="建站05-外加css&#x2F;js样式记录"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-08-31</div><div class="title">建站05-外加css&#x2F;js样式记录</div></div></a></div><div><a href="/post/06function/" title="建站06-添加功能"><img class="cover" src="https://www.xinruiyun.cn/ms-mcms/upload/1/editor/1580979167449.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-08-31</div><div class="title">建站06-添加功能</div></div></a></div><div><a href="/post/07design/" title="建站07-butterfly主题样式魔改记录"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-08-31</div><div class="title">建站07-butterfly主题样式魔改记录</div></div></a></div><div><a href="/post/02steps/" title="建站02-详细步骤"><img class="cover" src="https://cdn.jsdelivr.net/gh/waldenlak/Art/imgs/t3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-08-23</div><div class="title">建站02-详细步骤</div></div></a></div><div><a href="/post/03git&npm&hexo/" title="建站03-执行代码-git\npm\hexo常用执行命令"><img class="cover" src="https://gitforwindows.org/img/details_features.png" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-08-23</div><div class="title">建站03-执行代码-git\npm\hexo常用执行命令</div></div></a></div><div><a href="/post/10markdown/" title="markdown语法表、渲染配置与编辑器"><img class="cover" src="https://gitee.com/waking-insects/pic/raw/master/cov/md.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="ri-calendar-event-fill fa-fw"></i> 2021-09-06</div><div class="title">markdown语法表、渲染配置与编辑器</div></div></a></div></div></div></div><div class="com"><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div></main><footer id="footer" style="background: #e4edff"><div id="footer-wrap"><div class="copyright">2021 - 2022 &copy; 浮光河 - 雕刻我的构想，展览你的描绘</div><div class="framework-info"><span class="footer-info">Crafted with </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-info">-</span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-info"> by 惊蛰 子诺</span></div></div></footer></div><div id="rightside"><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="ri-shuffle-fill"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索内容</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入关键词查找" type="text"/></div></div><div id="local-search-results"></div></div><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  加载中</span></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://unpkg.com/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://unpkg.com/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
     }, null))
   }
 
-  if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
-}
-
-if ('Valine' === 'Valine' || !true) {
-  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
-} else {
-  function loadOtherComment () {
-    loadValine()
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
   }
-}</script></div><script async src="/js/fgh.js"></script><script async data-pjax src="/js/randombg.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script async src="https://cdn.jsdelivr.net/gh/waldenlak/plugins/bar.js"></script><script id="canvas_nest" defer="defer" color="201,214,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://unpkg.com/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async src="/js/fgh.js"></script><script async data-pjax src="/js/randombg.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script id="canvas_nest" defer="defer" color="201,214,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://unpkg.com/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
